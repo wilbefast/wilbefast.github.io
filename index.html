@@ -1,0 +1,34 @@
+<head>
+<link rel="stylesheet" type="text/css" href="wilbefast.css">
+
+
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="jquery.mixitup.min.js"></script>
+
+<script type="text/javascript" src="covers.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	covers.init({
+		cover_container : $('#cover_container')
+	});
+});
+</script>
+
+</head>
+
+<div class="controls">
+  <label>Filter:</label>
+  
+  <button class="filter" data-filter="all">All</button>
+  <button class="filter" data-filter=".category-1">Category 1</button>
+  <button class="filter" data-filter=".category-2">Category 2</button>
+  
+  <label>Sort:</label>
+  
+  <button class="sort" data-sort="myorder:asc">Asc</button>
+  <button class="sort" data-sort="myorder:desc">Desc</button>
+</div>
+
+<div id="cover_container" class="container">
+</div>

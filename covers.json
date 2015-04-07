@@ -1,0 +1,57 @@
+{
+	"abomination" : {
+		"image" : "abomination.png",
+		"tech" : "Game maker"
+	},		
+		      
+	"roll-out-and-about" : {
+		"image" : "roll-out-and-about.png",
+		"tech" : "Löve 2D"
+	},
+	"australian-foreign-policy-simulator-2014" : {
+		"image" : "australian-foreign-policy-simulator-2014.png",
+		"tech" : "Löve 2D"
+	},  
+	"snow-thy-enemy" : {
+		"image" : "snow-thy-enemy.png",
+		"tech" : "Löve 2D"
+	},
+	"dj-quetzalcoatl" : {
+		"image" : "dj-quetzalcoatl.png",
+		"tech" : "Slick 2D"
+	},			     
+	"soul-harvest" : {
+		"image" : "soul-harvest.png",
+		"tech" : "Löve 2D"
+	},
+	"hidden-in-plain-text" : {
+		"image" : "hidden-in-plain-text.png",
+		"tech" : "libcaca"
+	},		      
+	"surprise-cat-secks" : {
+		"image" : "surprise-cat-secks.png",
+		"tech" : "HTML 5"
+	},
+	"hugly" : {
+		"image" : "hugly.gif",
+		"tech" : "Löve 2D"
+	},			      
+	"twilight-of-humanity" : {
+		"image" : "twilight-of-humanity.png",
+		"tech" : "Löve 2D"
+	},
+	"just-be-yourself" : {
+		"image" : "just-be-yourself.png",
+		"tech" : "OpenFL"
+	},			      
+	"zombie-run" : {
+		"image" : "zombie-run.png",
+		"tech" : "Game maker"
+	},
+	"race-4-extinction" : {
+		"image" : "race-4-extinction.png",
+		"tech" : "Game maker"
+	}
+}
+
+
