@@ -1,57 +1,163 @@
 {
+	"supersoldat" : {
+		"image" : "supersoldat.png",
+		"tech" : [ "Game maker" ],
+		"started" : 2006
+	},
 	"abomination" : {
 		"image" : "abomination.png",
-		"tech" : "Game maker"
+		"tech" : [ "Game maker" ],
+		"started" : 2009
 	},		
 		      
 	"roll-out-and-about" : {
 		"image" : "roll-out-and-about.png",
-		"tech" : "Löve 2D"
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014
 	},
 	"australian-foreign-policy-simulator-2014" : {
 		"image" : "australian-foreign-policy-simulator-2014.png",
-		"tech" : "Löve 2D"
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014
 	},  
 	"snow-thy-enemy" : {
 		"image" : "snow-thy-enemy.png",
-		"tech" : "Löve 2D"
+		"tech" : [ "Löve 2D", "Box 2D" ],
+		"started" : 2015
 	},
 	"dj-quetzalcoatl" : {
 		"image" : "dj-quetzalcoatl.png",
-		"tech" : "Slick 2D"
+		"tech" : [ "LWJGL", "Slick 2D" ],
+		"started" : 2012
 	},			     
 	"soul-harvest" : {
 		"image" : "soul-harvest.png",
-		"tech" : "Löve 2D"
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014
 	},
 	"hidden-in-plain-text" : {
 		"image" : "hidden-in-plain-text.png",
-		"tech" : "libcaca"
+		"tech" : [ "libcaca" ],
+		"started" : 2014
 	},		      
 	"surprise-cat-secks" : {
 		"image" : "surprise-cat-secks.png",
-		"tech" : "HTML 5"
+		"tech" : [ "HTML 5" ],
+		"started" : 2012
 	},
 	"hugly" : {
 		"image" : "hugly.gif",
-		"tech" : "Löve 2D"
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013
 	},			      
 	"twilight-of-humanity" : {
 		"image" : "twilight-of-humanity.png",
-		"tech" : "Löve 2D"
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014
 	},
 	"just-be-yourself" : {
 		"image" : "just-be-yourself.png",
-		"tech" : "OpenFL"
+		"tech" : [ "OpenFL" ],
+		"started" : 2013
 	},			      
 	"zombie-run" : {
 		"image" : "zombie-run.png",
-		"tech" : "Game maker"
+		"tech" : [ "Game maker" ],
+		"started" : 2009
+	},
+	"murder-man" : {
+		"image" : "murder-man.png",
+		"tech" : [ "Game maker" ],
+		"started" : 2009
+	},
+	"malloc" : {
+		"image" : "malloc.png",
+		"tech" : [ "SDL" ],
+		"started" : 2010
+	},
+	"storm-worm" : {
+		"image" : "storm-worm.png",
+		"tech" : [ "SDL" ],
+		"started" : 2010
 	},
 	"race-4-extinction" : {
 		"image" : "race-4-extinction.png",
-		"tech" : "Game maker"
+		"tech" : [ "Game maker" ],
+		"started" : 2011
+	},
+	"disquiet" : {
+		"image" : "disquiet.png",
+		"tech" : [ "SFML", "FMOD" ],
+		"started" : 2012
+	},
+	"10-second-onslaught" : {
+		"image" : "10-second-onslaught.png",
+		"tech" : [ "OpenFL" ],
+		"started" : 2013
+	},
+	"gone" : {
+		"image" : "gone.png",
+		"tech" : [ "Android SDK" ],
+		"started" : 2010
+	},
+	"black-dog-html5" : {
+		"image" : "black-dog-html5.png",
+		"tech" : [ "HTML 5" ],
+		"started" : 2012
+	},
+	"black-dog-ndk" : {
+		"image" : "black-dog-ndk.png",
+		"tech" : [ "SDL", "Android NDK" ],
+		"started" : 2012
+	},
+	"dispatch-mushroom-hunt" : {
+		"image" : "dispatch-mushroom-hunt.png",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013
+	},
+	"divergence" : {
+		"image" : "divergence.png",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013
+	},
+	"opium-of-the-masses" : {
+		"image" : "opium-of-the-masses.gif",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013
+	},
+	"kraken-pool-party" : {
+		"image" : "kraken-pool-party.png",
+		"tech" : [ "Unity 3D" ],
+		"started" : 2014
+	},
+	"sympathy" : {
+		"image" : "sympathy.png",
+		"tech" : [ "Unity 3D", "FMOD" ],
+		"started" : 2013
+	},
+	"eggz" : {
+		"image" : "eggz.png",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013
+	},
+	"chlorine-dawn" : {
+		"image" : "chlorine-dawn.gif",
+		"tech" : [ "OpenFL" ],
+		"started" : 2015
+	},
+	"rootkit10" : {
+		"image" : "rootkit10.png",
+		"tech" : [ "Pix.js", "Node.js", "Socket.io" ],
+		"started" : 2015
+	},
+	"bugger" : {
+		"image" : "bugger.png",
+		"tech" : [ "SFML" ],
+		"started" : 2010
+	},
+	"somebody-order-a-pizza" : {
+		"image" : "somebody-order-a-pizza.png",
+		"tech" : [ "Löve 2D", "Box 2D" ],
+		"started" : 2015
 	}
 }
-
-

@@ -70,6 +70,7 @@ button + label{
   display: none;
 }
 
+/*
 .container .mix.category-1{
   border-top: 2px solid limegreen;
 }
@@ -77,6 +78,7 @@ button + label{
 .container .mix.category-2{
   border-top: 2px solid yellow;
 }
+*/
 
 .container .mix:after{
   content: attr(data-myorder);
