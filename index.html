@@ -15,7 +15,6 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 
-	<script type="text/javascript" src="js/checkboxFilter.js"></script>
 	<script type="text/javascript" src="js/covers.js"></script>
 
 	<script type="text/javascript">
@@ -23,15 +22,13 @@
 		covers.init({
 			cover_container : $('#cover_container'),
 			technology : $("#technology"),
-			sorting : $("#sorting")
+			sorting : $("#sorting"),
+			popup : $("#popup")
 		});
 	});
 	</script>
 
 </head>
-
-
-
 
 
 <body>
@@ -88,7 +85,7 @@
 
 <div class="controls">
 
-
+	<h2>My games</h2>
 
 	<fieldset>
 	  <label>Show:</label>
@@ -100,9 +97,10 @@
   <fieldset>
   	<label>Sort by:</label>
 		<select id="sorting">
+			<option value="awesome:desc">Awesome</option>
 			<option value="name:asc">Name</option>
-	    <option value="year:asc">Older</option>
-	    <option value="year:desc">Newer</option>
+	    <option value="year:asc">Oldest</option>
+	    <option value="year:desc">Newest</option>
 	  </select>
 
 	  <!--<input type="checkbox" name="order" value="reverse">Reverse</input>-->
@@ -122,10 +120,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         	<span aria-hidden="true">&times;</span>
       	</button>
-        <h4 class="modal-title" id="popup_title"></h4>
+        <h3 class="modal-title" id="popup_title"></h3>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body text-center">
+        <image id="popup_image">
+        </image>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">
