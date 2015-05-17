@@ -3,7 +3,9 @@ var covers = (function() {
 
 	var _init = function(settings)
 	{
-		var $tech = settings.technology
+		var sort = settings.sorting;
+		var tech = settings.technology;
+		var container = settings.cover_container;
 
 		$.getJSON( "covers.json", function( data ) {
 		  $.each( data, function( key, val ) {
@@ -12,19 +14,13 @@ var covers = (function() {
 		  	{
 		  		var t = val.tech[i].toLowerCase().replace(/ |\./g, "_");
 		  		c += " tech_" + t;
-		  		if(!(t in $tech))
+		  		if(!(t in tech))
 		  		{
-		  			var option = $tech[t] = $("<div/>", { 
-		  				"class" : "checkbox" 
+		  			var option = tech[t] = $("<option/>", { 
+		  				"value" : ".tech_" + t,
+		  				"text" : val.tech[i]
 		  			});
-		  			option.append($("<input/>", { 
-		  				"type" : "checkbox",
-		  				"value" : ".tech_" + t
-		  			}));
-		  			option.append($("<label/>", {
-		  				"text"	: val.tech[i]
-		  			}));
-					  option.insertAfter($tech);
+					  option.appendTo(tech);
 		  		}
 		  	}
 		  	var link = $("<a/>", {
@@ -32,7 +28,9 @@ var covers = (function() {
 		  		"data-target" : "#popup"
 		  	});
 			  var cover = $("<div/>", { 
-			  	"class": c
+			  	"class": c,
+			  	"data-year" : val.started,
+			  	"data-name" : val.name.charCodeAt(0),
 			  });
 			  var image = $("<div/>", {
 			  	"style" : "background-image : url('covers/" + val.image + "')"
@@ -43,16 +41,22 @@ var covers = (function() {
 			  image.appendTo(cover);
 			  label.appendTo(cover);
 			  cover.appendTo(link);
-			  link.appendTo(settings.cover_container);
+			  link.appendTo(container);
+		  });
+		 
+		 	// Filters
+	    tech.on('change', function(){
+		    container.mixItUp('filter', this.value);
 		  });
 
-		 	checkboxFilter.init();
-		 
-		  settings.cover_container.mixItUp();
+	    // Sorts
+	    sort.on('change', function(){
+		    container.mixItUp('sort', this.value);
+		  });
 
-	    /*$filterSelect.on('change', function(){
-		    $container.mixItUp('filter', this.value);
-		  });*/
+		 	// All done !
+		  container.mixItUp();
+		 	container.mixItUp('sort', "name:asc");
 		});
 
 	}

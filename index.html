@@ -22,7 +22,8 @@
 	$(document).ready(function() {
 		covers.init({
 			cover_container : $('#cover_container'),
-			technology : $("#technology")
+			technology : $("#technology"),
+			sorting : $("#sorting")
 		});
 	});
 	</script>
@@ -48,21 +49,21 @@
       <a class="brand" href="#">Wilbefast</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li><a target="_blank" href="https://twitter.com/wilbefast">
+          <li><a target="_blank" href="http://twitter.com/wilbefast">
           	Twitter</a></li>
-          <li><a target="_blank" href="https://fr.linkedin.com/in/williamdyce">
+          <li><a target="_blank" href="http://fr.linkedin.com/in/williamdyce">
           	LinkedIn</a></li>
-          <li><a target="_blank" href="https://www.facebook.com/wjdyce">
+          <li><a target="_blank" href="http://www.facebook.com/wjdyce">
           	Facebook</a></li>
-          <li><a target="_blank" href="https://github.com/wilbefast">
+          <li><a target="_blank" href="http://github.com/wilbefast">
           	Github</a></li>
-          <li><a target="_blank" href="https://wilbefast.itch.io">
+          <li><a target="_blank" href="http://wilbefast.itch.io">
           	Itch.io</a></li>
-          <li><a target="_blank" href="https://www.indiedb.com/members/wilbefast">
+          <li><a target="_blank" href="http://www.indiedb.com/members/wilbefast">
           	Indie DB</a></li>
-          <li><a target="_blank" href="https://gamejolt.com/profile/wilbefast/672037/">
+          <li><a target="_blank" href="http://gamejolt.com/profile/wilbefast/672037/">
           	Game Jolt</a></li>
-          <li><a target="_blank" href="https://soundcloud.com/wilbefast">
+          <li><a target="_blank" href="http://soundcloud.com/wilbefast">
           	Soundcloud</a></li>
           <li><a target="_blank" href="http://www.onegameamonth.com/wilbefast">
           	One Game A Month</a></li>
@@ -85,36 +86,30 @@
 
 <!-- MixItUp controls -->
 
-<!-- 
 <div class="controls">
--->
-
-	<form class="controls" id="Filters">
-	  <fieldset>
-	    <h4 id="technology">Technology</h4>
-	  </fieldset>
-	  
-	  <button id="Reset">Clear Filters</button>
-	</form>
 
 
 
+	<fieldset>
+	  <label>Show:</label>
+		<select id="technology">
+	    <option value="all">All</option>
+	  </select>
+  </fieldset>
 
+  <fieldset>
+  	<label>Sort by:</label>
+		<select id="sorting">
+			<option value="name:asc">Name</option>
+	    <option value="year:asc">Older</option>
+	    <option value="year:desc">Newer</option>
+	  </select>
 
-
-
-
-
-<!--
-  <label id="technology">Technology:</label>
-  <button class="filter" data-filter="all">All</button>
-
-
-  <label>Sort:</label>
-  <button class="sort" data-sort="myorder:asc">Asc</button>
-  <button class="sort" data-sort="myorder:desc">Desc</button>
+	  <!--<input type="checkbox" name="order" value="reverse">Reverse</input>-->
+  </fieldset>
 </div>
--->
+
+
 <!-- MixItUp container -->
 <div id="cover_container" class="container mixitup_container">
 </div>
