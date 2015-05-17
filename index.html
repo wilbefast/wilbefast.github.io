@@ -1,30 +1,148 @@
+<!DOCTYPE html>
+<html>
 <head>
-<link rel="stylesheet" type="text/css" href="wilbefast.css">
+	<title>Wilbefast</title>
+	<meta name="description" content="Free Web tutorials">
+	<meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio">
+	<meta name="author" content="William Dyce">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="jquery.mixitup.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/wilbefast.css">
+  
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 
-<script type="text/javascript" src="covers.js"></script>
+	<script type="text/javascript" src="js/checkboxFilter.js"></script>
+	<script type="text/javascript" src="js/covers.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-	covers.init({
-		cover_container : $('#cover_container')
+	<script type="text/javascript">
+	$(document).ready(function() {
+		covers.init({
+			cover_container : $('#cover_container'),
+			technology : $("#technology")
+		});
 	});
-});
-</script>
+	</script>
 
 </head>
 
+
+
+
+
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button" 
+      class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">Wilbefast</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a target="_blank" href="https://twitter.com/wilbefast">
+          	Twitter</a></li>
+          <li><a target="_blank" href="https://fr.linkedin.com/in/williamdyce">
+          	LinkedIn</a></li>
+          <li><a target="_blank" href="https://www.facebook.com/wjdyce">
+          	Facebook</a></li>
+          <li><a target="_blank" href="https://github.com/wilbefast">
+          	Github</a></li>
+          <li><a target="_blank" href="https://wilbefast.itch.io">
+          	Itch.io</a></li>
+          <li><a target="_blank" href="https://www.indiedb.com/members/wilbefast">
+          	Indie DB</a></li>
+          <li><a target="_blank" href="https://gamejolt.com/profile/wilbefast/672037/">
+          	Game Jolt</a></li>
+          <li><a target="_blank" href="https://soundcloud.com/wilbefast">
+          	Soundcloud</a></li>
+          <li><a target="_blank" href="http://www.onegameamonth.com/wilbefast">
+          	One Game A Month</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<!-- Banner -->
+
+<div class="banner jumbotron">
+	<img src="images/banner.jpg">
+	</img>
+	<header>
+	  <h1>Wilbefast's homepage</h1>      
+	  <p>Where there's a will, be fast</p>
+	</header>
+</div>
+
+<!-- MixItUp controls -->
+
+<!-- 
 <div class="controls">
+-->
+
+	<form class="controls" id="Filters">
+	  <fieldset>
+	    <h4 id="technology">Technology</h4>
+	  </fieldset>
+	  
+	  <button id="Reset">Clear Filters</button>
+	</form>
+
+
+
+
+
+
+
+
+
+<!--
   <label id="technology">Technology:</label>
   <button class="filter" data-filter="all">All</button>
+
 
   <label>Sort:</label>
   <button class="sort" data-sort="myorder:asc">Asc</button>
   <button class="sort" data-sort="myorder:desc">Desc</button>
 </div>
-
-<div id="cover_container" class="container">
+-->
+<!-- MixItUp container -->
+<div id="cover_container" class="container mixitup_container">
 </div>
+
+<!-- Game description popup -->
+<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        	<span aria-hidden="true">&times;</span>
+      	</button>
+        <h4 class="modal-title" id="popup_title"></h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+        	Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

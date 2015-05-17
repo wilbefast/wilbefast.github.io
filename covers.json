@@ -1,163 +1,201 @@
 {
 	"supersoldat" : {
+		"name" : "Supersoldat",
 		"image" : "supersoldat.png",
 		"tech" : [ "Game maker" ],
 		"started" : 2006
 	},
 	"abomination" : {
+		"name" : "Abomination",
 		"image" : "abomination.png",
 		"tech" : [ "Game maker" ],
 		"started" : 2009
 	},		
 		      
 	"roll-out-and-about" : {
+		"name" : "Roll Out and About",
 		"image" : "roll-out-and-about.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014
 	},
 	"australian-foreign-policy-simulator-2014" : {
+		"name" : "Australian Foreign Policy Simulator 2014",
 		"image" : "australian-foreign-policy-simulator-2014.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014
 	},  
 	"snow-thy-enemy" : {
+		"name" : "Snow Thy Enemy",
 		"image" : "snow-thy-enemy.png",
 		"tech" : [ "Löve 2D", "Box 2D" ],
 		"started" : 2015
 	},
 	"dj-quetzalcoatl" : {
+		"name" : "DJ Quetzalcoatl",
 		"image" : "dj-quetzalcoatl.png",
 		"tech" : [ "LWJGL", "Slick 2D" ],
 		"started" : 2012
 	},			     
 	"soul-harvest" : {
+		"name" : "Soul Harvest",
 		"image" : "soul-harvest.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014
 	},
 	"hidden-in-plain-text" : {
+		"name" : "Hidden in Plain Text",
 		"image" : "hidden-in-plain-text.png",
 		"tech" : [ "libcaca" ],
 		"started" : 2014
 	},		      
 	"surprise-cat-secks" : {
+		"name" : "Surprise Cat Secks",
 		"image" : "surprise-cat-secks.png",
 		"tech" : [ "HTML 5" ],
 		"started" : 2012
 	},
 	"hugly" : {
+		"name" : "Hugly",
 		"image" : "hugly.gif",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013
 	},			      
 	"twilight-of-humanity" : {
+		"name" : "Twilight of Humanity",
 		"image" : "twilight-of-humanity.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014
 	},
 	"just-be-yourself" : {
+		"name" : "Just Be Yourself",
 		"image" : "just-be-yourself.png",
 		"tech" : [ "OpenFL" ],
 		"started" : 2013
 	},			      
 	"zombie-run" : {
+		"name" : "Zombie Run",
 		"image" : "zombie-run.png",
 		"tech" : [ "Game maker" ],
 		"started" : 2009
 	},
 	"murder-man" : {
+		"name" : "Murder Man",
 		"image" : "murder-man.png",
 		"tech" : [ "Game maker" ],
 		"started" : 2009
 	},
 	"malloc" : {
+		"name" : "Malloc",
 		"image" : "malloc.png",
 		"tech" : [ "SDL" ],
 		"started" : 2010
 	},
 	"storm-worm" : {
+		"name" : "Storm Worm",
 		"image" : "storm-worm.png",
 		"tech" : [ "SDL" ],
 		"started" : 2010
 	},
 	"race-4-extinction" : {
+		"name" : "Race 4 Extinction",
 		"image" : "race-4-extinction.png",
 		"tech" : [ "Game maker" ],
 		"started" : 2011
 	},
 	"disquiet" : {
+		"name" : "Disquiet",
 		"image" : "disquiet.png",
 		"tech" : [ "SFML", "FMOD" ],
 		"started" : 2012
 	},
 	"10-second-onslaught" : {
+		"name" : "10 Second Onslaught",
 		"image" : "10-second-onslaught.png",
 		"tech" : [ "OpenFL" ],
 		"started" : 2013
 	},
 	"gone" : {
+		"name" : "Gone",
 		"image" : "gone.png",
 		"tech" : [ "Android SDK" ],
 		"started" : 2010
 	},
 	"black-dog-html5" : {
+		"name" : "Black Dog (HTML 5)",
 		"image" : "black-dog-html5.png",
 		"tech" : [ "HTML 5" ],
 		"started" : 2012
 	},
 	"black-dog-ndk" : {
+		"name" : "Black Dog (Android)",
 		"image" : "black-dog-ndk.png",
 		"tech" : [ "SDL", "Android NDK" ],
 		"started" : 2012
 	},
 	"dispatch-mushroom-hunt" : {
+		"name" : "Dispatch: Mushroom Hunt",
 		"image" : "dispatch-mushroom-hunt.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013
 	},
 	"divergence" : {
+		"name" : "Divergence",
 		"image" : "divergence.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013
 	},
 	"opium-of-the-masses" : {
+		"name" : "Opium of the masses",
 		"image" : "opium-of-the-masses.gif",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013
 	},
 	"kraken-pool-party" : {
+		"name" : "Kraken Pool Party",
 		"image" : "kraken-pool-party.png",
 		"tech" : [ "Unity 3D" ],
 		"started" : 2014
 	},
 	"sympathy" : {
+		"name" : "Sympathy",
 		"image" : "sympathy.png",
 		"tech" : [ "Unity 3D", "FMOD" ],
 		"started" : 2013
 	},
 	"eggz" : {
+		"name" : "Eggz",
 		"image" : "eggz.png",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013
 	},
 	"chlorine-dawn" : {
+		"name" : "Chlorine Dawn",
 		"image" : "chlorine-dawn.gif",
 		"tech" : [ "OpenFL" ],
 		"started" : 2015
 	},
 	"rootkit10" : {
+		"name" : "Rookit10",
 		"image" : "rootkit10.png",
 		"tech" : [ "Pix.js", "Node.js", "Socket.io" ],
 		"started" : 2015
 	},
 	"bugger" : {
+		"name" : "Bugger!",
 		"image" : "bugger.png",
 		"tech" : [ "SFML" ],
 		"started" : 2010
 	},
 	"somebody-order-a-pizza" : {
+		"name" : "Somebody order a pizza?",
 		"image" : "somebody-order-a-pizza.png",
 		"tech" : [ "Löve 2D", "Box 2D" ],
 		"started" : 2015
+	},
+	"xx13-pace-breaker" : {
+		"name" : "XX13: Pace Breaker",
+		"image" : "xx13-pace-breaker.png",
+		"tech" : [ "HTML 5", "Node.js", "Socket.io" ],
+		"started" : 2013
 	}
 }
