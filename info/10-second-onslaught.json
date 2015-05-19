@@ -1,0 +1,18 @@
+{
+	"description" : [
+		"A 10-second tower-defence game where towers are placed strategically ",
+		"in time as well as in space. Made for Ludum Dare 27 \"10 Seconds\"."
+	],
+	"team" : {
+		"Design" : [ "William Dyce" ],
+		"Programming" : [ "William Dyce", "Antoine Seilles" ],
+		"Art" : [ "Thomas Renault" ]
+	},
+	"links" : {
+		"Github" : "https://github.com/wilbefast/10-second-onslaught",
+		"Newgrounds" : "http://www.newgrounds.com/portal/view/624185",
+		"Kongregate" : "http://www.kongregate.com/games/wilbefaster/10-second-onslaught",
+		"Ludum Dare" : "http://ludumdare.com/compo/ludum-dare-27/?action=preview&uid=14535",
+		"Jupi Plays" : "https://www.youtube.com/watch?v=W1OMEshCeQ0&feature=youtu.be&t=1m10s"
+	}
+}

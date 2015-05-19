@@ -1,0 +1,17 @@
+{  
+  "description":[  
+  	"A C++ Android port of the HTML 5 runner, using SDL 2 and OpenGLES. ",
+  	"This was litterally one of the first C++ games to use the Android NDK."
+  ],
+  "team":{  
+    "Design, Programming and Art":[ "William Dyce" ],
+    "Sound and Music":[ "Open Game Art" ]
+  },
+  "embed": {
+  	"youtube" : "https://www.youtube.com/embed/G2_P9sEYGbY"
+  },
+  "links":{  
+  	"Developer commentary" : "https://www.youtube.com/watch?v=JZf_BwyOAAw",
+  	"Github" : "https://github.com/wilbefast/black-dog"
+  }
+}

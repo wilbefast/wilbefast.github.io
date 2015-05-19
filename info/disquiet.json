@@ -1,0 +1,14 @@
+{  
+  "description":[  
+  	"A minimalistic horror game made at university as an excuse to mess around with ",
+  	"FMOD in C++."
+  ],
+  "team":{  
+    "Design, Programming, Music":[ "William Dyce" ]
+  },
+  "links":{  
+  	"Itch.io" : "http://wilbefast.itch.io/dispatch-mushroom-hunt",
+  	"Indie DB" : "http://www.indiedb.com/games/disquiet",
+  	"Sound Cloud" : "https://soundcloud.com/wilbefast/disquiet"
+  }
+}

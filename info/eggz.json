@@ -1,0 +1,19 @@
+{  
+  "description":[  
+  	"A local-multiplayer single-screen RTS with eggz in it."
+  ],
+  "team":{  
+    "Design, Programming":[ "William Dyce" ],
+    "Art, Music":["Barth Frey"]
+  },
+  "embed":{
+  	"youtube":"HVIPBp146js"
+  },
+  "links":{  
+  	"Timelapse" : "https://www.youtube.com/watch?v=trdepe3y6xM",
+  	"Indie DB" : "http://www.indiedb.com/games/eggz",
+  	"Itch.io" : "http://wilbefast.itch.io/divergence",
+  	"French Cows" : "http://www.frenchcows.com/en/games/eggz.html",
+  	"Github" : "https://github.com/wilbefast/eggz-game"
+  }
+}

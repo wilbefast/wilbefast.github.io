@@ -1,0 +1,17 @@
+{  
+  "description":[  
+  	"Made solo for Ludum Dare 32 \"Unconventional Weapon\". ",
+  	"My interpretation of the theme was \"a weapon banned by the Geneva Convention\", ",
+  	"For instance chemical weapons. "
+  ],
+  "team":{  
+    "Design, Programming, Art, Sound and Music":[ "William Dyce" ]
+  },
+  "links":{  
+  	"Itch.io" : "http://wilbefast.itch.io/chlorine-dawn",
+  	"Game Jolt" : "http://gamejolt.com/games/puzzle/chlorine-dawn/66492/",
+  	"Github" : "https://github.com/wilbefast/geneva-game/tree/master",
+  	"Ludum Dare" : "http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=14535",
+  	"Sound Cloud" : "https://soundcloud.com/wilbefast/chlorine-dawn"
+  }
+}

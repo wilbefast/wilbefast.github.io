@@ -160,3 +160,8 @@ CUSTOM CLASSES
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+#popup * p {
+	margin-top: 8px;
+	margin-bottom: 4px;
+}

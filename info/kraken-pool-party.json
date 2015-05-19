@@ -1,0 +1,14 @@
+{
+	"description" : [
+		"A local-multiplayer game where 4 players control a Kraken ",
+		" together. Made for "
+	],
+  "team":{  
+    "Design, Programming, Art, Music":["William Dyce"]
+  },
+  "links":{  
+  	"Itch.io" : "http://wilbefast.itch.io/kraken-pool-party",
+  	"Ludum Dare" : "http://ludumdare.com/compo/2014/04/29/kraken-pool-party-post-mortem/",
+  	"Sound Cloud" : "https://soundcloud.com/wilbefast/kraken-pool-party"
+  }
+}

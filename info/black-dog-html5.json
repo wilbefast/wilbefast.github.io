@@ -1,0 +1,16 @@
+{  
+  "description":[  
+		"My first ever HTML 5 game, very loosely based on the classic flash ",
+		"\"Helicopter Game\". Code is not obfuscated so that people can learn from it."
+  ],
+  "team":{  
+    "Design, Programming and Art":[ "William Dyce" ],
+    "Sound and Music":[ "Open Game Art" ]
+  },
+  "embed": {
+  	"youtube" : "yOJBEs5NkBU"
+  },
+  "links":{ 
+  	"Free Gamer" : "http://freegamer.blogspot.fr/2012/03/black-dog-html5-helicopter-in-hell-by.html"
+  }
+}

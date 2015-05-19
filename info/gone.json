@@ -1,0 +1,18 @@
+{  
+  "description":[  
+  	"An interactive Memento Mori. ",
+  	"My first Android game at my first Art Game Weekend: it won!"
+  ],
+  "team":{  
+    "Design":[ "Claire Sistach", "Romain Bonnin" ],
+    "Programming": ["William Dyce"],
+    "Art":["Fabien Cazenabe", "Lionel Jabre", "César Espejo"],
+    "Music":["Lise George"]
+  },
+  "embed":{
+  	"youtube":"TM4AAyxU9ho"
+  },
+  "links":{  
+  	"Indie DB" : "http://www.indiedb.com/games/gone"
+  }
+}

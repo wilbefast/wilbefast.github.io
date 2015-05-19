@@ -1,0 +1,16 @@
+{  
+  "description":[  
+  	"A mini-game platform-shooter salvaged from an unfinished 7 Day Roguelike project. ",
+  	"Shoot all the mushrooms before the time runs out!"
+  ],
+  "team":{  
+    "Design, Programming":[ "William Dyce", "Kevin Bradshaw" ],
+    "Art" : ["Hannes Delbeke"],
+    "Music" : ["Nebulous Flynn"]
+  },
+  "links":{  
+  	"Itch.io" : "http://wilbefast.itch.io/dispatch-mushroom-hunt",
+  	"Indie DB" : "http://www.indiedb.com/members/wilbefast/downloads/dispatch-mushroom-hunt",
+  	"Sound Cloud" : "https://soundcloud.com/nebulousflynn/playcanvas-jam-2"
+  }
+}

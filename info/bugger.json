@@ -1,0 +1,19 @@
+{  
+  "description":[  
+  	"My first \"real\" game made with C++ and SDL: with multiple weapons, AI, ",
+  	"scrolling, etc. It's a somewhat innocently-named top-down shooter in the vein ",
+  	"of CyberDogs, where you debug software with a bit gun. Programming jokes abound!"
+  ],
+  "team":{  
+    "Design, Programming and Art":[ "William Dyce" ]
+  },
+  "embed": {
+  	"youtube" : "videoseries?list=PLlexDj8lmOpGrbIP32x-YqrrSPyx3HPag"
+  },
+  "links":{  
+  	"TIGForums thread" : "http://forums.tigsource.com/index.php?topic=18152.0",
+  	"Facebook" : "https://www.facebook.com/pages/Bugger/176067899079652",
+  	"Indie DB" : "http://www.indiedb.com/games/bugger",
+  	"LGDB" : "http://www.lgdb.org/game/bugger"
+  }
+}

@@ -6,9 +6,88 @@ var covers = (function() {
 
 	var _select = function(cover) {
 		_popup.modal('show');
-		_popup.find("#popup_image").attr("src", "covers/" + cover.image);
+		var image = _popup.find("#popup_image");
+		image.show();
+		image.attr("src", "covers/" + cover.image);
 		_popup.find("#popup_title").text(cover.name);
-		$.getJSON("info/" + cover.key + ".json", function( data ) {
+		$.getJSON("info/" + cover.key + ".json", function(data) {
+			// description
+			if(data.description)
+			{
+				_popup.find(".description").show();
+				var description = "";
+				for(var i in data.description)
+					description += data.description[i];
+				_popup.find("#popup_description").text(description);
+			}
+			else
+				_popup.find(".description").hide();
+
+			// embed
+			var embed_root = _popup.find("#popup_embed");
+			embed_root.empty();
+			if(data.embed)
+			{
+				// youtube video
+				if(data.embed.youtube)
+				{
+					var url = "https://www.youtube.com/embed/"+data.embed.youtube;
+					var video = ($("<iframe width=\"500\" height=\"350\" src=\"" 
+						+ url + "\"frameborder=\"0\" allowfullscreen></iframe>"));
+					embed_root.append(video);
+					image.hide()
+				}
+			}
+
+			// team members
+			if(data.team)
+			{
+				_popup.find(".team").show();
+				var team_table = _popup.find("#popup_team");
+				team_table.empty();
+				for(var role in data.team)
+				{
+					var members = data.team[role];
+
+					var row = $("<tr/>");
+					row.append($("<td/>", { text: role}));
+					var members_string = "";
+					for(var i in members)
+					{
+						members_string += members[i];
+						if(i >=  members.length - 1)
+							members_string += ".";
+						else
+							members_string += ", ";
+					}
+					row.append($("<td/>", { text: members_string}));
+					team_table.append(row);
+				}
+			}
+			else
+				_popup.find(".team").hide();
+
+			// external links
+			if(data.links)
+			{
+				_popup.find(".links").show();
+				var links_list = _popup.find("#popup_links");
+				links_list.empty();
+				for(var link in data.links)
+				{
+					var href = data.links[link];
+					links_list.append($("<li/>").append($("<a/>", { 
+						text : link, 
+						href : href,
+						target : "_blank"
+					})));
+				}
+			}
+			else
+				_popup.find(".links").hide();
+
+		}).fail(function( jqXHR, textStatus, errorThrown) {
+			console.error(textStatus, "while retrieving JSON file for cover", cover.key);
 		});
 	}
 
@@ -17,7 +96,11 @@ var covers = (function() {
 		var sort = settings.sorting;
 		var tech = settings.technology;
 		var container = settings.cover_container;
+
 		_popup = settings.popup;
+		_popup.on('hidden.bs.modal', function () {
+		  _popup.find("#popup_embed").empty();
+		})
 
 		$.getJSON( "covers.json", function( data ) {
 		  $.each( data, function( key, val ) {

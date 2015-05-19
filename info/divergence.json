@@ -1,0 +1,13 @@
+{  
+  "description":[  
+  	"A game about ambition, choice, missed opportunities and being obtuse."
+  ],
+  "team":{  
+    "Design, Programming, Art":[ "William Dyce" ],
+    "Music":["George Abitbol"]
+  },
+  "links":{  
+  	"Itch.io" : "http://wilbefast.itch.io/divergence",
+  	"Sound Cloud" : "https://soundcloud.com/george_abitbol-1/schrodingers-cat-full"
+  }
+}

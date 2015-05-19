@@ -1,0 +1,20 @@
+{  
+  "description":[  
+    "Thanks to its sharp claws, the Abomination can climb up walls and even hang ",
+    "from the wooden ceilings - or metal ones if magnetised. ",
+    "Pain = bad. Teddy = good."
+  ],
+  "team":{  
+    "Design, Programming and Art":[ "William Dyce" ],
+    "Music":[ "Henrik Roslund" ]
+  },
+  "embed": {
+  	"youtube" : "1tgN40kC1Dk"
+  },
+  "links":{  
+    "Indie DB":"http://www.indiedb.com/games/abomination",
+    "Itch.io":"http://wilbefast.itch.io/abomination",
+    "Game Maker":"http://gmc.yoyogames.com/index.php?showtopic=420610",
+    "Pirate Bay Bundle":"http://odditie-s.tumblr.com/post/81109325064/the-pirate-bay-bundle"
+  }
+}

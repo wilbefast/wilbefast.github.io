@@ -1,0 +1,22 @@
+{  
+  "description":[  
+  	"A beat-em-up brawler originally made for the 4th Lyon Game Dev Party. ",
+  	"I've continued it solo for a while since then."
+  ],
+  "team":{  
+		"Design, Project Lead": ["Julien Deville"],
+		"Lead developer": ["William Dyce"],
+		"Developers": ["Maxime Ailloud", "Alex Verbrugghe"],
+		"Artistic Director": ["Gaëlle Rouby"],
+		"Graphic artists": ["Jules Bacon", "Stephanie Bottex", "Caroline Vic"]
+  },
+  "embed":{
+  	"youtube":"Y5N31BNfdLU"
+  },
+  "links":{  
+  	"Itch.io" : "http://wilbefast.itch.io/hugly",
+  	"Indie DB" : "http://www.indiedb.com/games/hugly",
+  	"Github" : "https://github.com/wilbefast/bear-hug-beware-game",
+  	"Game Dev Party" : "http://gamedevparty.fr/gdp4-bisounours-team-et-son-jeu-hugly/"
+  }
+}
