@@ -13,7 +13,7 @@ body, button{
 }
 
 body {
- background: url('/images/background.png');
+ background: url('../images/background.png');
  background-position: center top;
 }
 
