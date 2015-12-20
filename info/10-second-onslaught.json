@@ -8,6 +8,9 @@
 		"Programming" : [ "William Dyce", "Antoine Seilles" ],
 		"Art" : [ "Thomas Renault" ]
 	},
+	"embed" : {
+		"youtube" : "tgw9fvatYfM"
+	},
 	"links" : {
 		"Github" : "https://github.com/wilbefast/10-second-onslaught",
 		"Newgrounds" : "http://www.newgrounds.com/portal/view/624185",
