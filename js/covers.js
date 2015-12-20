@@ -46,6 +46,14 @@ var covers = (function() {
 						+ url + "\"frameborder=\"0\" allowfullscreen></iframe>"));
 					embed_root.append(video);
 				}
+				// twitter video
+				else if(data.embed.twitter_video)
+				{
+					var url = "https://twitter.com/" + data.embed.twitter_video;
+					var video = ($("<blockquote class=\"twitter-video\" lang=\"en\"><a href=\"" 
+						+ url + "\"></a></blockquote>"));
+					embed_root.append(video);
+				}
 			}
 
 			// team members

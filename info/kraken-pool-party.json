@@ -1,7 +1,7 @@
 {
 	"description" : [
 		"A local-multiplayer game where 4 players control a Kraken ",
-		" together. Made for "
+		" together. Made for Ludum Dare 29 \"Beneath the surface\"."
 	],
   "team":{  
     "Design, Sound, Music":["William Dyce"],

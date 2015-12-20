@@ -1,3 +1,16 @@
 {
-	"description" : ""
+  "description" : [
+    "My first ever video game: an action platform game where you can run really fast and flying-rebound-back-kick ",
+    "Nazi-clones across the room. Heavily inspired by Loderunner and Abe's Oddyssey."
+  ],
+  "team":{  
+    "Design, Programming, Art":["William Dyce"]
+  },
+  "embed":{
+    "youtube":"XTxHXCvxE2M"
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/supersoldat",
+    "Indie DB" : "http://www.indiedb.com/games/supersoldat/"
+  }
 }

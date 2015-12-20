@@ -1,18 +1,20 @@
 {
-  "description" : "A game made as part of a research project to study the effects of an avatar's appearance on player behaviour",
+  "description" : [
+    "An arcade game made for the \"DJ Hero\" turn-table.",
+    "You play as a trio of coloured Mayan snakes who must protect the world."
+  ],
   "team":{  
-    "Project Lead, Art":["Delphine Soriano"]
-    "Programming":["William Dyce"],
+    "Art":["Loren Costet", "Antoine Druaux", "Steve Ohl"],
+    "Sound":["Antoine Druaux"],
+    "Programming":["William Dyce", "Emmanuel Corno"]
   },
   "embed":{
     "youtube":"hQEMWbNMXCw"
   },
   "links":{  
-    "Indie DB" : "http://www.indiedb.com/downloads/storm-worm",
-    "Ludum Dare" : "http://ludumdare.com/compo/ludum-dare-24/?uid=14535",
-    "Github" : "https://github.com/wilbefast/surprise-cat-secks",
-    "Itch.io" : "http://wilbefast.itch.io/surprise-cat-secks",
-    "Game Jolt" : "http://gamejolt.com/games/surprise-cat-secks/66477",
-    "Timelapse" : "https://www.youtube.com/watch?v=Ei8oLOVzWA0"
+    "GGJ Archive" : "http://archive.globalgamejam.org/2012/quetzalcoatl",
+    "Itch.io" : "http://wilbefast.itch.io/dj-quetzal",
+    "Indie DB" : "http://www.indiedb.com/games/dj-quetzal-quetzalcoatl",
+    "Github" : "https://github.com/wilbefast/quetzalcoatl-game"
   }
 }

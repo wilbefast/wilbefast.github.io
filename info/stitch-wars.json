@@ -1,7 +1,7 @@
 {
   "description" : [
     "A turn-based strategy game with an emphasis on positioning and flanking, set in a '9' inspired 'Stitch-punk' world.",
-    "Made for the Ludum Dare 34 game jam."
+    "Made for the Ludum Dare 34 game jam, \"Two button control\"."
   ],
   "team":{  
     "Design, Programming, Art" : ["William Dyce"]
