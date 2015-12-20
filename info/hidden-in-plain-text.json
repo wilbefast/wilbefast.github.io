@@ -1,3 +1,16 @@
-{
-	
+{  
+  "description":[  
+    "A simple hide-and-seek game made as an excuse to mess around with ASCII text rendering.",
+    "It was created for the Exile Spring 2014 game jam in Denmark, using libcaca."
+  ],
+  "team":{  
+    "Design, Programming":[ "William Dyce" ],
+  },
+  "embed":{
+    "youtube":"TM4AAyxU9ho"
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/hidden-in-plain-text",
+    "Github" : "https://github.com/wilbefast/hidden-in-plain-text"
+  }
 }

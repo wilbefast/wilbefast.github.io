@@ -1,0 +1,14 @@
+{
+  "description" : [
+    "A real-world fighting game where you fight with actual, physical, puppets.",
+    "Made for No Screen Jam 2015 in Antwerp."
+  ],
+  "team":{  
+    "Design":["William Dyce"],
+    "Craftwork":["Tiphaine Uro", "William Dyce"],
+    "Hardware":["Damien Blanchard"]
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/puppet-joust"
+  }
+}

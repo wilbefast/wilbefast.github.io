@@ -1,3 +1,16 @@
 {
-	"description" : ""
+  "description" : [
+    "A very NSFW game about hosting a party and choosing which guests and props to add.",
+    "The goal is to collect all 10 endings... I guess. Made for Global Game Jam 2015 at ISART Digital in Paris."
+  ],
+  "team":{  
+    "Design, Art":["Johann Spielmann"],
+    "Programming":["William Dyce", "Guillaume Faure"],
+    "Music":["George Abitbol"]
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/somebody-order-a-pizza",
+    "Github" : "https://github.com/wilbefast/you-ordered-a-pizza",
+    "GGJ Archive" : "http://globalgamejam.org/2015/games/somebody-order-pizza"
+  }
 }

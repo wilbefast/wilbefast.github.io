@@ -1,3 +1,14 @@
 {
-	
+  "description" : [
+    "Competitive local-multiplayer Katamari combat game where you can hide in the snow and throw poo at people.",
+    "Made on a train for Train Jam 2015, where the theme was 'On Track'."
+  ],
+  "team":{  
+    "Programming":["William Dyce"],
+    "Art":["Johann Spielmann"],
+    "Music":["George Abitbol"]
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/snow-thy-enemy"
+  }
 }

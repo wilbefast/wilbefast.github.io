@@ -1,3 +1,11 @@
 {
-	"description" : ""
+  "description" : [
+    "A hacking-themed networked multiplayer RTS where you control your units by typing UNIX-style commands."
+  ],
+  "team":{  
+    "Programming, Art":["William Dyce"]
+  },
+  "links":{  
+    "Github" : "https://github.com/wilbefast/rootkit10-game"
+  }
 }

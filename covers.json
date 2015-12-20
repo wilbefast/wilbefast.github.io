@@ -3,6 +3,7 @@
 		"name" : "Supersoldat",
 		"tech" : [ "Game maker" ],
 		"started" : 2006,
+		"finished" : 2008,
 		"awesome" : 6
 	},
 	"abomination" : {
@@ -40,6 +41,7 @@
 		"name" : "Soul Harvest",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014,
+		"finished" : 2016,
 		"awesome" : 11
 	},
 	"hidden-in-plain-text" : {
@@ -77,12 +79,14 @@
 		"name" : "Zombie Run",
 		"tech" : [ "Game maker" ],
 		"started" : 2009,
+		"finished" : 2010,
 		"awesome" : 6
 	},
 	"murder-man" : {
 		"name" : "Murder Man",
 		"tech" : [ "Game maker" ],
 		"started" : 2009,
+		"finished" : 2010,
 		"awesome" : 5
 	},
 	"malloc" : {
@@ -162,6 +166,7 @@
 		"name" : "Sympathy",
 		"tech" : [ "Unity 3D", "FMOD" ],
 		"started" : 2013,
+		"finished" : 2014,
 		"awesome" : 5
 	},
 	"eggz" : {
@@ -179,7 +184,7 @@
 	},
 	"rootkit10" : {
 		"name" : "Rookit10",
-		"tech" : [ "Pix.js", "Node.js", "Socket.io" ],
+		"tech" : [ "Pixi.js", "Node.js", "Socket.io" ],
 		"started" : 2015,
 		"awesome" : 5
 	},
@@ -200,5 +205,24 @@
 		"tech" : [ "HTML 5", "Node.js", "Socket.io" ],
 		"started" : 2013,
 		"awesome" : 3
+	},
+	"puppet-joust" : {
+		"name" : "Puppet Joust",
+		"image" : "puppet-joust.jpg",
+		"tech" : [ "Physical" ],
+		"started" : 2015,
+		"awesome" : 6
+	},
+	"stitch-wars" : {
+		"name" : "Stitch Wars",
+		"tech" : [ "HTML 5" ],
+		"started" : 2015,
+		"awesome" : 4
+	},
+	"butt-jockey" : {
+		"name" : "Butt Jockey",
+		"tech" : [ "Physical", "Unity 3D" ],
+		"started" : 2015,
+		"awesome" : 6
 	}
 }

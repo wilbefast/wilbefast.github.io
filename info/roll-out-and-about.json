@@ -1,3 +1,13 @@
 {
-	
+  "description" : [
+    "A Transformer 4 tie-in game made using ZX Spectrum constraints for the Retro Game Jam 2014."
+  ],
+  "team":{  
+    "Programming, Art, Sound, Music":["William Dyce", "Mattia Russomando"],
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/roll-out-and-about",
+    "Sound Cloud" : "https://soundcloud.com/wilbefast/transformers",
+    "Github" : "https://github.com/wilbefast/roll-out-and-about"
+  }
 }

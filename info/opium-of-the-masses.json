@@ -1,3 +1,13 @@
 {
-	"description" : ""
+  "description" : [
+    "A competitive local multiplayer game played mouse against keyboard.",
+    "Made for Retro Game Jam 2013 in Montpellier."
+  ],
+  "team":{  
+    "Design, Programming, Art":["William Dyce"],
+    "Music":["George Abitbol"]
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/opiate-of-the-masses"
+  }
 }

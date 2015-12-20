@@ -1,3 +1,15 @@
 {
-	"description" : ""
+  "description" : "A moody survival game about the near-extinct of Humanity in over 50,000 years ago.",
+  "team":{  
+    "Design, Programming, Music" : ["William Dyce"]
+  },
+  "embed":{
+    "youtube":"j5xMir73QCY"
+  },
+  "links":{  
+    "Github" : "https://github.com/wilbefast/snowman-ludumdare31",
+    "Itch.io" : "http://wilbefast.itch.io/twilight-of-humanity",
+    "Oujevipo" : "http://oujevipo.fr/general/3933-twilight-of-humanity/",
+    "Ludum Dare" : "http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=14535"
+  }
 }

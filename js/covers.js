@@ -28,6 +28,8 @@ var covers = (function() {
 			embed_root.empty();
 			if(data.embed)
 			{
+				image.hide();
+
 				// youtube video
 				if(data.embed.youtube)
 				{
@@ -35,7 +37,14 @@ var covers = (function() {
 					var video = ($("<iframe width=\"500\" height=\"350\" src=\"" 
 						+ url + "\"frameborder=\"0\" allowfullscreen></iframe>"));
 					embed_root.append(video);
-					image.hide()
+				}
+				// vine video
+				else if(data.embed.vine)
+				{
+					var url = "https://vine.co/v/" + data.embed.vine + "/embed/simple";
+					var video = ($("<iframe width=\"500\" height=\"350\" src=\""
+						+ url + "\"frameborder=\"0\" allowfullscreen></iframe>"));
+					embed_root.append(video);
 				}
 			}
 
@@ -87,7 +96,7 @@ var covers = (function() {
 				_popup.find(".links").hide();
 
 		}).fail(function( jqXHR, textStatus, errorThrown) {
-			console.error(textStatus, "while retrieving JSON file for cover", cover.key);
+			console.error(textStatus, "while retrieving JSON file for cover", cover.key, textStatus, errorThrown);
 		});
 	}
 

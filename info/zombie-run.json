@@ -1,3 +1,14 @@
 {
-	"description" : ""
+  "description" : "A 1-to-2 player arcade game about running away from zombies and/or killing them with a chainsaw.",
+  "team":{  
+    "Design, Programming, Art" : ["William Dyce"],
+    "Music" : ["Henrik Roslund"]
+  },
+  "embed":{
+    "youtube":"eBwc4jyAIBk"
+  },
+  "links":{  
+    "Indie DB" : "http://www.indiedb.com/games/zombie-run",
+    "Itch.io" : "http://wilbefast.itch.io/zombie-run"
+  }
 }

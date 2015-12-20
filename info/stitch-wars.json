@@ -1,0 +1,14 @@
+{
+  "description" : [
+    "A turn-based strategy game with an emphasis on positioning and flanking, set in a '9' inspired 'Stitch-punk' world.",
+    "Made for the Ludum Dare 34 game jam."
+  ],
+  "team":{  
+    "Design, Programming, Art" : ["William Dyce"]
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/stitchwars",
+    "Ludum Dare" : "http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=14535",
+    "Github" : "https://github.com/wilbefast/ceaseless-tactics"
+  }
+}

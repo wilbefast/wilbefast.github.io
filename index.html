@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wilbefast</title>
-	<meta name="description" content="Free Web tutorials">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Wilbefast's Website</title>
+	<meta name="description" content="Wilbefast's game portfolio">
 	<meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio">
 	<meta name="author" content="William Dyce">
 
@@ -45,27 +46,34 @@
       </button>
       <a class="brand" href="#">Wilbefast</a>
       <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li><a target="_blank" href="http://twitter.com/wilbefast">
-          	Twitter</a></li>
-          <li><a target="_blank" href="http://fr.linkedin.com/in/williamdyce">
-          	LinkedIn</a></li>
-          <li><a target="_blank" href="http://www.facebook.com/wjdyce">
-          	Facebook</a></li>
-          <li><a target="_blank" href="http://github.com/wilbefast">
-          	Github</a></li>
-          <li><a target="_blank" href="http://wilbefast.itch.io">
-          	Itch.io</a></li>
-          <li><a target="_blank" href="http://www.indiedb.com/members/wilbefast">
-          	Indie DB</a></li>
-          <li><a target="_blank" href="http://gamejolt.com/profile/wilbefast/672037/">
-          	Game Jolt</a></li>
-          <li><a target="_blank" href="http://soundcloud.com/wilbefast">
-          	Soundcloud</a></li>
-          <li><a target="_blank" href="http://www.onegameamonth.com/wilbefast">
-          	One Game A Month</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+        <a target="_blank" href="http://twitter.com/wilbefast">
+        	<img src="social-media-icons/twitter.png" class="social-media-icon" alt="Twitter"/>
+        </a>
+        <a target="_blank" href="http://fr.linkedin.com/in/williamdyce">
+        	<img src="social-media-icons/linkedin.png" class="social-media-icon" alt="LinkedIn"/>
+        </a>
+        <a target="_blank" href="http://www.facebook.com/wjdyce">
+        	<img src="social-media-icons/facebook.png" class="social-media-icon" alt="Facebook"/>
+        </a>
+        <a target="_blank" href="http://github.com/wilbefast">
+        	<img src="social-media-icons/github.png" class="social-media-icon" alt="Github"/>
+        </a>
+        <a target="_blank" href="http://wilbefast.itch.io">
+        	<img src="social-media-icons/itch-io.png" class="social-media-icon" alt="Itch.io"/>
+        </a>
+        <a target="_blank" href="http://www.indiedb.com/members/wilbefast">
+        	<img src="social-media-icons/indiedb.png" class="social-media-icon" alt="Indie DB"/>
+        </a>
+        <a target="_blank" href="http://gamejolt.com/profile/wilbefast/672037/">
+        	<img src="social-media-icons/gamejolt.png" class="social-media-icon" alt="Game Jolt"/>
+        </a>
+        <a target="_blank" href="http://soundcloud.com/wilbefast">
+        	<img src="social-media-icons/soundcloud.png" class="social-media-icon" alt="Soundcloud"/>
+        </a>
+        <a target="_blank" href="http://www.onegameamonth.com/wilbefast">
+        	<img src="social-media-icons/1gam.png" class="social-media-icon" alt="One Game A Month"/>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -76,8 +84,30 @@
 	<img src="images/banner.jpg">
 	</img>
 	<header>
-	  <h1>Wilbefast's homepage</h1>      
-	  <p>Where there's a will, be fast</p>
+    <table>
+      <tr>
+        <td>
+      	  <h1>Where there's a will, be fast...</h1>      
+      	  <p>
+            #!/bin/bash<br>
+            <br>
+            # Oh hi there!<br>
+            # I'm William, Linux-user and navel-gazer supreme.<br>
+            # I make games.<br>
+            <br>
+            # Here are some games that I have made.<br>
+            <br>
+            rm -rf /
+          </p>
+        </td>
+        <td>
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/wilbefast" data-widget-id="501839840279687168">Tweets by @wilbefast</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          </script>
+        </td>
+      </tr>
+    </table>
+          
 	</header>
 </div>
 
@@ -85,28 +115,35 @@
 
 <div class="controls">
 
-	<h2>My games</h2>
+  <table>
+    <tr>
+      <td>
+  	   <h2>My games</h2>
+      </td>
 
-	<fieldset>
-	  <label>Show:</label>
-		<select id="technology">
-	    <option value="all">All</option>
-	  </select>
-  </fieldset>
-
-  <fieldset>
-  	<label>Sort by:</label>
-		<select id="sorting">
-			<option value="awesome:desc">Awesome</option>
-			<option value="name:asc">Name</option>
-	    <option value="year:asc">Oldest</option>
-	    <option value="year:desc">Newest</option>
-	  </select>
-
+      <td>
+      	<fieldset>
+      	  <label>Show:</label>
+      		<select id="technology">
+      	    <option value="all">All</option>
+      	  </select>
+        </fieldset>
+      </td>
+      <td>
+        <fieldset>
+        	<label>Sort by:</label>
+      		<select id="sorting">
+      			<option value="awesome:desc">Awesome</option>
+      			<option value="name:asc">Name</option>
+      	    <option value="year:asc">Oldest</option>
+      	    <option value="year:desc">Newest</option>
+      	  </select>
+        </fieldset>
+      </td>
 	  <!--<input type="checkbox" name="order" value="reverse">Reverse</input>-->
-  </fieldset>
+    </tr>
+  </table>
 </div>
-
 
 <!-- MixItUp container -->
 <div id="cover_container" class="container mixitup_container">

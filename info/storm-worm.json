@@ -1,3 +1,9 @@
 {
-	"description" : ""
+  "description" : "A Snake clone written in C using the Simple Direct-Media Layer (SDL)",
+  "team":{  
+    "Programming, Art":["William Dyce"],
+  },
+  "links":{  
+    "Indie DB" : "http://www.indiedb.com/downloads/storm-worm"
+  }
 }

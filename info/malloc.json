@@ -1,3 +1,10 @@
 {
-	"description" : ""
+	"description" : "A Sokoban clone written in C using the Simple Direct-Media Layer (SDL)",
+  "team":{  
+    "Programming, Art":["William Dyce"],
+  },
+  "links":{  
+    "Windows download" : "http://www.indiedb.com/groups/indie-devs/downloads/malloc-windows",
+    "Linux download" : "http://www.indiedb.com/downloads/malloc-linux"
+  }
 }

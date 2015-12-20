@@ -1,3 +1,17 @@
 {
-	"description" : ""
+  "description" : [
+    "A satirical game in which the player controls a voluptuous Doctor trying to save all the poor,",
+    "innocent Zombies who've been mown down by 'Murder Man': a mountain of muscle and weaponry..."
+  ],
+  "team":{  
+    "Design, Programming, Art":["William Dyce"],
+    "Music":["Henrik Roslund"]
+  },
+  "embed":{
+    "youtube":"iNTVBLxdVb8"
+  },
+  "links":{  
+    "Itch.io" : "http://wilbefast.itch.io/murder-man",
+    "Indie DB" : "http://www.indiedb.com/games/murder-man"
+  }
 }

@@ -1,7 +1,8 @@
 {
-  "description" : "A surprising cat Eugenics simulator, now with more napalm. Also my first ever HTML 5 game.",
+  "description" : "A game made as part of a research project to study the effects of an avatar's appearance on player behaviour",
   "team":{  
-    "Programming, Art, Music, Sound":["William Dyce"],
+    "Project Lead, Art":["Delphine Soriano"]
+    "Programming":["William Dyce"],
   },
   "embed":{
     "youtube":"hQEMWbNMXCw"

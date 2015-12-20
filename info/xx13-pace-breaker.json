@@ -1,3 +1,12 @@
 {
-	"description" : ""
+  "description" : [
+    "A 'Hidden In Plain Sight' clone made for Global Game Jam 2013 (heartbeat) in Montpellier."
+  ],
+  "team":{  
+    "Design, Programming" : ["William Dyce", "Kevin Bradshaw"],
+    "Art" : ["Léa Tabary"]
+  },
+  "links":{  
+    "Github" : "https://github.com/wilbefast/xx13-pace-breaker"
+  }
 }

@@ -4,7 +4,10 @@
 		" together. Made for "
 	],
   "team":{  
-    "Design, Programming, Art, Music":["William Dyce"]
+    "Design, Sound, Music":["William Dyce"],
+    "Programming":["Sébastien Andary"],
+    "Additional Programming":["Mellany Mohamed El Had", "Bourhane", "William Dyce"],
+    "Graphics":["Lamine", "Flora","Aurel"]
   },
   "links":{  
   	"Itch.io" : "http://wilbefast.itch.io/kraken-pool-party",
