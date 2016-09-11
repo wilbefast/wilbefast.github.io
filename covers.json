@@ -11,49 +11,47 @@
 		"tech" : [ "Game maker" ],
 		"started" : 2009,
 		"awesome" : 7
-	},		
-		      
+	},
 	"roll-out-and-about" : {
 		"name" : "Roll Out and About",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014,
+		"finished" : 2014,
 		"awesome" : 6
 	},
 	"australian-foreign-policy-simulator-2014" : {
 		"name" : "Australian Foreign Policy Simulator 2014",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014,
+		"finished" : 2014,
 		"awesome" : 9
-	},  
+	},
 	"snow-thy-enemy" : {
 		"name" : "Snow Thy Enemy",
 		"tech" : [ "Löve 2D", "Box 2D" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 8
 	},
 	"dj-quetzal" : {
 		"name" : "DJ Quetzalcoatl",
 		"tech" : [ "LWJGL", "Slick 2D" ],
 		"started" : 2012,
+		"finished" : 2012,
 		"awesome" : 4
-	},			     
-	"soul-harvest" : {
-		"name" : "Soul Harvest",
-		"tech" : [ "Löve 2D" ],
-		"started" : 2014,
-		"finished" : 2016,
-		"awesome" : 11
 	},
 	"hidden-in-plain-text" : {
 		"name" : "Hidden in Plain Text",
 		"tech" : [ "libcaca" ],
 		"started" : 2014,
+		"finished" : 2014,
 		"awesome" : 5
-	},		      
+	},
 	"surprise-cat-secks" : {
 		"name" : "Surprise Cat Secks",
 		"tech" : [ "HTML 5" ],
 		"started" : 2012,
+		"finished" : 2012,
 		"awesome" : 3
 	},
 	"hugly" : {
@@ -62,11 +60,12 @@
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013,
 		"awesome" : 8
-	},			      
+	},
 	"twilight-of-humanity" : {
 		"name" : "Twilight of Humanity",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014,
+		"finished" : 2014,
 		"awesome" : 9
 	},
 	"just-be-yourself" : {
@@ -74,7 +73,7 @@
 		"tech" : [ "OpenFL" ],
 		"started" : 2013,
 		"awesome" : 8
-	},			      
+	},
 	"zombie-run" : {
 		"name" : "Zombie Run",
 		"tech" : [ "Game maker" ],
@@ -93,12 +92,14 @@
 		"name" : "Malloc",
 		"tech" : [ "SDL" ],
 		"started" : 2010,
+		"finished" : 2010,
 		"awesome" : 0
 	},
 	"storm-worm" : {
 		"name" : "Storm Worm",
 		"tech" : [ "SDL" ],
 		"started" : 2010,
+		"finished" : 2010,
 		"awesome" : 0
 	},
 	"race-4-extinction" : {
@@ -111,12 +112,14 @@
 		"name" : "Disquiet",
 		"tech" : [ "SFML", "FMOD" ],
 		"started" : 2012,
+		"finished" : 2012,
 		"awesome" : 5
 	},
 	"10-second-onslaught" : {
 		"name" : "10 Second Onslaught",
 		"tech" : [ "OpenFL" ],
 		"started" : 2013,
+		"finished" : 2013,
 		"awesome" : 2
 	},
 	"gone" : {
@@ -160,6 +163,7 @@
 		"name" : "Kraken Pool Party",
 		"tech" : [ "Unity 3D" ],
 		"started" : 2014,
+		"finished" : 2014,
 		"awesome" : 6
 	},
 	"sympathy" : {
@@ -180,12 +184,14 @@
 		"image" : "chlorine-dawn.gif",
 		"tech" : [ "OpenFL" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 5
 	},
 	"rootkit10" : {
 		"name" : "Rookit10",
 		"tech" : [ "Pixi.js", "Node.js", "Socket.io" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 5
 	},
 	"bugger" : {
@@ -198,6 +204,7 @@
 		"name" : "Somebody order a pizza?",
 		"tech" : [ "Löve 2D", "Box 2D" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 3
 	},
 	"xx13-pace-breaker" : {
@@ -211,18 +218,44 @@
 		"image" : "puppet-joust.jpg",
 		"tech" : [ "Physical" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 6
 	},
 	"stitch-wars" : {
 		"name" : "Stitch Wars",
 		"tech" : [ "HTML 5" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 4
 	},
 	"butt-jockey" : {
 		"name" : "Butt Jockey",
 		"tech" : [ "Physical", "Unity 3D" ],
 		"started" : 2015,
+		"finished" : 2015,
 		"awesome" : 6
+	},
+	"burn-the-witch" : {
+		"name" : "Burn the Witch",
+		"image" : "burn-the-witch.gif",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2016,
+		"finished" : 2016,
+		"awesome" : 7
+	},
+	"troll-attack" : {
+		"name" : "Troll Attack",
+		"tech" : [ "Pico8" ],
+		"started" : 2016,
+		"finished" : 2016,
+		"awesome" : 10
+	},
+	"kanelbullicka" : {
+		"name" : "Kanelbullicka",
+		"image" : "kanelbullicka.gif",
+		"tech" : [ "Löve 2D", "Box 2D" ],
+		"started" : 2016,
+		"finished" : 2016,
+		"awesome" : 8
 	}
 }

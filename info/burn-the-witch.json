@@ -1,0 +1,13 @@
+{
+  "description":[
+    "A game that aims to question the witch-hunt mentality of social networks like Twitter.",
+  	"Made for #LOWREZJAM 2016."
+  ],
+  "team":{
+    "Design, Programming, Art, Music and Sound":[ "William Dyce" ]
+  },
+  "links":{
+  	"Itch.io" : "https://wilbefast.itch.io/burnthewitch",
+  	"Github" : "https://github.com/wilbefast/BurnTheWitch-game"
+  }
+}

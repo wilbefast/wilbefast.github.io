@@ -1,0 +1,18 @@
+{
+  "description":[
+  	"A game about licking Swedish pastries, made for Castle Game Jam 2016.",
+    "Made in 4 hours and polished the next day. Music is Creative Commons."
+  ],
+  "team":{
+    "Design, Programming, Art and Sound":[ "William Dyce" ]
+  },
+  "embed":{
+  	"youtube":"Mp0bnXLeic8"
+  },
+  "links":{
+  	"Itch.io" : "https://wilbefast.itch.io/kanelbullicka",
+  	"Github" : "https://github.com/wilbefast/kanelbullick",
+    "Castle Game Jam" : "http://www.castlegamejam.com/en/2016/teams/wilbefast/",
+    "Game Jolt" : "http://fireside.gamejolt.com/post/jam-favorites-castle-game-jam-nwp47zi4"
+  }
+}

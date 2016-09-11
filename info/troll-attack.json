@@ -1,0 +1,17 @@
+{
+  "description":[
+  	"A game about fencing troll, made using Pico-8.",
+    "Made for Castle Game Jam 2016."
+  ],
+  "team":{
+    "Design, Programming, Art, Music and Sound":[ "William Dyce" ]
+  },
+  "embed":{
+  	"youtube":"RTWuTbAmx24?start=288"
+  },
+  "links":{
+  	"Pico8" : "http://www.lexaloffle.com/bbs/?tid=3795",
+  	"Github" : "https://github.com/wilbefast/troll-attack-p8",
+    "Castle Game Jam" : "http://www.castlegamejam.com/en/2016/teams/troll-attack/"
+  }
+}
