@@ -1576,6 +1576,7 @@ var Avatar = function(args) {
 	this.reloadTime = 0.0;
 	this.weaponDirection = new h3d_Vector(0,0,0);
 	this.weaponTarget = new h3d_Vector(0,0,0);
+	this.isGrappled = false;
 	this.moveDirection = new h3d_Vector(0,0,0);
 	Entity.call(this,args.parent);
 	this.posChanged = true;
@@ -1623,7 +1624,7 @@ var Avatar = function(args) {
 	_this6.x = 32;
 	var _this7 = this.animLeft;
 	_this7.posChanged = true;
-	_this7.y = 0;
+	_this7.y = 24;
 	var _this8 = this.animLeft;
 	_this8.posChanged = true;
 	_this8.scaleX = -1;
@@ -1737,18 +1738,25 @@ Avatar.prototype = $extend(Entity.prototype,{
 			_this6.x *= f;
 			_this6.y *= f;
 			_this6.z *= f;
-			this.friction = 10;
+			if(this.isGrappled) {
+				this.friction = 5000.0;
+			} else if(isFiring) {
+				this.friction = 500.0;
+			} else {
+				this.friction = 10;
+			}
 		}
 		var _this7 = this.speed;
 		var v2 = this.moveDirection;
 		this.speed = new h3d_Vector(_this7.x + v2.x,_this7.y + v2.y,_this7.z + v2.z,_this7.w + v2.w);
 		Entity.prototype.update.call(this,dt);
+		this.isGrappled = false;
 	}
 	,setAnimation: function(anim) {
 		this.currentAnim.set_visible(false);
 		anim.set_visible(true);
 		this.currentAnim = anim;
-		this.currentAnim.speed = 5;
+		this.currentAnim.speed = 7;
 	}
 	,setTarget: function(x,y) {
 		var _this = this.weaponTarget;
@@ -1778,6 +1786,8 @@ Avatar.prototype = $extend(Entity.prototype,{
 				break;
 			default:
 			}
+		} else if(((other) instanceof Zombie)) {
+			this.isGrappled = true;
 		}
 	}
 	,addScore: function(amount) {
@@ -1915,13 +1925,13 @@ var BulletImpact = function(bullet) {
 	this.posChanged = true;
 	this.y = bullet.y;
 	var atlas = hxd_Res.get_loader().loadCache("foreground.atlas",hxd_res_Atlas);
-	var impact = atlas.getAnim("impact");
-	Useful.assert(impact != null,"atlas must contain the 'impact'");
-	var anim = new h2d_Anim(impact,null,this);
+	var explosion = atlas.getAnim("explosion");
+	Useful.assert(explosion != null,"atlas must contain the 'explosion'");
+	var anim = new h2d_Anim(explosion,null,this);
 	anim.posChanged = true;
-	anim.x = -32;
+	anim.x = -64;
 	anim.posChanged = true;
-	anim.y = 32;
+	anim.y = 64;
 	anim.speed = 15;
 	anim.loop = false;
 	anim.onAnimEnd = function() {
@@ -1970,7 +1980,9 @@ var BulletTrail = function(bullet) {
 	_this1.x *= -0.5;
 	_this1.y *= -0.5;
 	_this1.z *= -0.5;
-	this.friction = 1000;
+	this.speed.x += (Math.random() - 0.5) * 100;
+	this.speed.y += (Math.random() - 0.5) * 100;
+	this.friction = 100;
 };
 $hxClasses["BulletTrail"] = BulletTrail;
 BulletTrail.__name__ = "BulletTrail";
@@ -3070,13 +3082,23 @@ GameScreen.__super__ = State;
 GameScreen.prototype = $extend(State.prototype,{
 	onEnter: function(previousState) {
 		State.score = 0;
-		this.zombieTimer = 1.0;
-		var tile = h2d_Tile.fromColor(11976624,1,1,null,{ fileName : "src/states/GameScreen.hx", lineNumber : 27, className : "GameScreen", methodName : "onEnter"});
-		var bitmap = new h2d_Bitmap(tile,this);
-		bitmap.posChanged = true;
-		bitmap.scaleX = 1366;
-		bitmap.posChanged = true;
-		bitmap.scaleY = 664;
+		this.zombiePeriod = 1.5;
+		this.zombieTimer = this.zombiePeriod;
+		var background = new h2d_Object(this);
+		var backgroundTile = hxd_Res.get_loader().loadCache("concrete.png",hxd_res_Image).toTile();
+		var x = 0.0;
+		while(x < 1366) {
+			var y = 0.0;
+			while(y < 664) {
+				var backgroundBitmap = new h2d_Bitmap(backgroundTile,background);
+				backgroundBitmap.posChanged = true;
+				backgroundBitmap.x = x;
+				backgroundBitmap.posChanged = true;
+				backgroundBitmap.y = y;
+				y += backgroundTile.height;
+			}
+			x += backgroundTile.width;
+		}
 		this.wallNorth = new Wall({ parent : this, x : 0, y : -664, width : 1366, height : 664});
 		this.wallSouth = new Wall({ parent : this, x : 0, y : 664, width : 1366, height : 664});
 		this.wallWest = new Wall({ parent : this, x : -1366, y : -664, width : 1366, height : 1992});
@@ -3094,7 +3116,8 @@ GameScreen.prototype = $extend(State.prototype,{
 		EntityCollider.generateCollisions(dt);
 		this.zombieTimer -= dt;
 		if(this.zombieTimer <= 0) {
-			this.zombieTimer = 1.0;
+			this.zombieTimer = this.zombiePeriod;
+			this.zombiePeriod = Math.max(0.1,this.zombiePeriod - 0.02);
 			var angle = Math.random() * Math.PI * 2;
 			var zombie = new Zombie({ parent : this, x : 1366 * (0.5 + Math.cos(angle)), y : 664 * (0.5 + Math.sin(angle))});
 		}
@@ -3393,7 +3416,7 @@ var MuzzleFlash = function(bullet) {
 		++_g;
 		t.dx = t.dy = -48;
 	}
-	anim.speed = 10;
+	anim.speed = 9 + Math.random() * 2;
 	anim.loop = false;
 	anim.onAnimEnd = function() {
 		_gthis.purge = true;
@@ -4357,7 +4380,11 @@ Zombie.prototype = $extend(Entity.prototype,{
 					State.setCurrent("score");
 					hxd_Res.get_loader().loadCache("gameover.wav",hxd_res_Sound).play(false,0.1);
 				} else {
-					var _this9 = this.moveDirection;
+					var _this9 = other.speed;
+					_this9.x *= 0.4;
+					_this9.y *= 0.4;
+					_this9.z *= 0.4;
+					var _this10 = this.moveDirection;
 					var x3 = other.x - this.x;
 					var y3 = other.y - this.y;
 					if(y3 == null) {
@@ -4366,20 +4393,20 @@ Zombie.prototype = $extend(Entity.prototype,{
 					if(x3 == null) {
 						x3 = 0.;
 					}
-					_this9.x = x3;
-					_this9.y = y3;
-					_this9.z = 0.;
-					_this9.w = 1.;
-					var _this10 = this.moveDirection;
-					_this10.x *= 100;
-					_this10.y *= 100;
-					_this10.z *= 100;
-					var _this11 = other.speed;
+					_this10.x = x3;
+					_this10.y = y3;
+					_this10.z = 0.;
+					_this10.w = 1.;
+					var _this11 = this.moveDirection;
+					_this11.x *= 10;
+					_this11.y *= 10;
+					_this11.z *= 10;
+					var _this12 = other.speed;
 					var v3 = this.moveDirection;
-					other.speed = new h3d_Vector(_this11.x + v3.x,_this11.y + v3.y,_this11.z + v3.z,_this11.w + v3.w);
+					other.speed = new h3d_Vector(_this12.x + v3.x,_this12.y + v3.y,_this12.z + v3.z,_this12.w + v3.w);
 				}
 			}
-			var _this12 = this.moveDirection;
+			var _this13 = this.moveDirection;
 			var x4 = this.x - other.x;
 			var y4 = this.y - other.y;
 			if(y4 == null) {
@@ -4388,20 +4415,20 @@ Zombie.prototype = $extend(Entity.prototype,{
 			if(x4 == null) {
 				x4 = 0.;
 			}
-			_this12.x = x4;
-			_this12.y = y4;
-			_this12.z = 0.;
-			_this12.w = 1.;
-			var _this13 = this.moveDirection;
-			_this13.x *= 200;
-			_this13.y *= 200;
-			_this13.z *= 200;
-			var _this14 = this.speed;
+			_this13.x = x4;
+			_this13.y = y4;
+			_this13.z = 0.;
+			_this13.w = 1.;
+			var _this14 = this.moveDirection;
+			_this14.x *= 200;
+			_this14.y *= 200;
+			_this14.z *= 200;
+			var _this15 = this.speed;
 			var v4 = this.moveDirection;
-			var x5 = _this14.x + v4.x;
-			var y5 = _this14.y + v4.y;
-			var z1 = _this14.z + v4.z;
-			var w1 = _this14.w + v4.w;
+			var x5 = _this15.x + v4.x;
+			var y5 = _this15.y + v4.y;
+			var z1 = _this15.z + v4.z;
+			var w1 = _this15.w + v4.w;
 			if(w1 == null) {
 				w1 = 1.;
 			}
@@ -4420,6 +4447,7 @@ Zombie.prototype = $extend(Entity.prototype,{
 			var _this_w = w1;
 			var v5 = other.speed;
 			this.speed = new h3d_Vector(_this_x + v5.x,_this_y + v5.y,_this_z + v5.z,_this_w + v5.w);
+			this.stunDuration = 0.2;
 		}
 	}
 	,__class__: Zombie
@@ -67203,6 +67231,7 @@ hx__registerFont = function(name,data) {
 js_Boot.__toStr = ({ }).toString;
 Avatar.RADIUS = 18;
 Avatar.HIGH_FRICTION = 5000.0;
+Avatar.MEDIUM_FRICTION = 500.0;
 Avatar.LOW_FRICTION = 10;
 Avatar.ACCELERATION = 5000.0;
 Avatar.MAX_SPEED = 1000.0;
@@ -67217,7 +67246,9 @@ State.HEIGHT = 664;
 State.freeze = 0.0;
 State.shake = 0.0;
 State.score = 0;
-GameScreen.ZOMBIE_PERIOD = 1.0;
+GameScreen.ZOMBIE_INITIAL_PERIOD = 1.5;
+GameScreen.ZOMBIE_PERIOD_DECREASE = 0.02;
+GameScreen.ZOMBIE_MINIMUM_PERIOD = 0.1;
 GameScreen.ZOMBIE_DISTANCE = 50.0;
 MuzzleFlash.DURATION = 0.07;
 MuzzleFlash.RADIUS = 32;
@@ -67231,7 +67262,7 @@ Xml.Document = 6;
 Zombie.RADIUS = 16;
 Zombie.COLLISION_STUN_DURATION = 0.2;
 Zombie.ZOMBIE_COLLISION_KNOCKBACK = 200;
-Zombie.AVATAR_COLLISION_KNOCKBACK = 100;
+Zombie.AVATAR_COLLISION_KNOCKBACK = 10;
 Zombie.MAX_REPULSION = 0.7;
 Zombie.REPULSION_RANGE = 96;
 Zombie.HIGH_FRICTION = 2000.0;
