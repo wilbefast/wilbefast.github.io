@@ -1294,9 +1294,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 						} else {
 							var tmp2;
 							if(c11.x > b2.xMax && c11.y < b2.yMin) {
-								var dx11 = c11.x - b2.xMax;
-								var dy11 = c11.y - b2.yMin;
-								tmp2 = dx11 * dx11 + dy11 * dy11 > c11.ray * c11.ray;
+								var dx2 = c11.x - b2.xMax;
+								var dy2 = c11.y - b2.yMin;
+								tmp2 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
 							} else {
 								tmp2 = false;
 							}
@@ -1305,9 +1305,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 							} else {
 								var tmp3;
 								if(c11.x < b2.xMin && c11.y > b2.yMax) {
-									var dx2 = c11.x - b2.xMin;
-									var dy2 = c11.y - b2.yMax;
-									tmp3 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
+									var dx3 = c11.x - b2.xMin;
+									var dy3 = c11.y - b2.yMax;
+									tmp3 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
 								} else {
 									tmp3 = false;
 								}
@@ -1316,9 +1316,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 								} else {
 									var tmp4;
 									if(c11.x > b2.xMax && c11.y > b2.yMax) {
-										var dx3 = c11.x - b2.xMax;
-										var dy3 = c11.y - b2.yMax;
-										tmp4 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
+										var dx4 = c11.x - b2.xMax;
+										var dy4 = c11.y - b2.yMax;
+										tmp4 = dx4 * dx4 + dy4 * dy4 > c11.ray * c11.ray;
 									} else {
 										tmp4 = false;
 									}
@@ -1352,9 +1352,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 					} else {
 						var tmp5;
 						if(c21.x < b1.xMin && c21.y < b1.yMin) {
-							var dx4 = c21.x - b1.xMin;
-							var dy4 = c21.y - b1.yMin;
-							tmp5 = dx4 * dx4 + dy4 * dy4 > c21.ray * c21.ray;
+							var dx5 = c21.x - b1.xMin;
+							var dy5 = c21.y - b1.yMin;
+							tmp5 = dx5 * dx5 + dy5 * dy5 > c21.ray * c21.ray;
 						} else {
 							tmp5 = false;
 						}
@@ -1363,9 +1363,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 						} else {
 							var tmp6;
 							if(c21.x > b1.xMax && c21.y < b1.yMin) {
-								var dx12 = c21.x - b1.xMax;
-								var dy12 = c21.y - b1.yMin;
-								tmp6 = dx12 * dx12 + dy12 * dy12 > c21.ray * c21.ray;
+								var dx6 = c21.x - b1.xMax;
+								var dy6 = c21.y - b1.yMin;
+								tmp6 = dx6 * dx6 + dy6 * dy6 > c21.ray * c21.ray;
 							} else {
 								tmp6 = false;
 							}
@@ -1374,9 +1374,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 							} else {
 								var tmp7;
 								if(c21.x < b1.xMin && c21.y > b1.yMax) {
-									var dx21 = c21.x - b1.xMin;
-									var dy21 = c21.y - b1.yMax;
-									tmp7 = dx21 * dx21 + dy21 * dy21 > c21.ray * c21.ray;
+									var dx7 = c21.x - b1.xMin;
+									var dy7 = c21.y - b1.yMax;
+									tmp7 = dx7 * dx7 + dy7 * dy7 > c21.ray * c21.ray;
 								} else {
 									tmp7 = false;
 								}
@@ -1385,9 +1385,9 @@ Entity.prototype = $extend(h2d_Object.prototype,{
 								} else {
 									var tmp8;
 									if(c21.x > b1.xMax && c21.y > b1.yMax) {
-										var dx31 = c21.x - b1.xMax;
-										var dy31 = c21.y - b1.yMax;
-										tmp8 = dx31 * dx31 + dy31 * dy31 > c21.ray * c21.ray;
+										var dx8 = c21.x - b1.xMax;
+										var dy8 = c21.y - b1.yMax;
+										tmp8 = dx8 * dx8 + dy8 * dy8 > c21.ray * c21.ray;
 									} else {
 										tmp8 = false;
 									}
@@ -1654,16 +1654,16 @@ Avatar.__super__ = Entity;
 Avatar.prototype = $extend(Entity.prototype,{
 	update: function(dt) {
 		var isFiring = hxd_Key.isDown(0);
+		var _this = this.weaponDirection;
+		var v = this.weaponTarget;
+		_this.x = v.x;
+		_this.y = v.y;
+		_this.z = v.z;
+		_this.w = v.w;
+		this.weaponDirection.x -= this.x;
+		this.weaponDirection.y -= this.y;
 		this.reloadTime = Math.max(0,this.reloadTime - dt);
 		if(isFiring && this.reloadTime <= 0) {
-			var _this = this.weaponDirection;
-			var v = this.weaponTarget;
-			_this.x = v.x;
-			_this.y = v.y;
-			_this.z = v.z;
-			_this.w = v.w;
-			this.weaponDirection.x -= this.x;
-			this.weaponDirection.y -= this.y;
 			this.weaponDirection.normalize();
 			var bullet = new Bullet(this,this.weaponDirection);
 			var _this1 = this.weaponDirection;
@@ -1673,7 +1673,7 @@ Avatar.prototype = $extend(Entity.prototype,{
 			var _this2 = this.speed;
 			var v1 = this.weaponDirection;
 			this.speed = new h3d_Vector(_this2.x - v1.x,_this2.y - v1.y,_this2.z - v1.z,_this2.w - v1.w);
-			this.reloadTime = 0.1;
+			this.reloadTime = 0.2;
 		}
 		var _this3 = this.moveDirection;
 		var x = 0;
@@ -1700,13 +1700,13 @@ Avatar.prototype = $extend(Entity.prototype,{
 		if(hxd_Key.isDown(40) || hxd_Key.isDown(83)) {
 			this.moveDirection.y += 1;
 		}
-		if(Math.abs(this.moveDirection.x) > Math.abs(this.moveDirection.y)) {
-			if(this.moveDirection.x < 0) {
+		if(Math.abs(this.weaponDirection.x) > Math.abs(this.weaponDirection.y)) {
+			if(this.weaponDirection.x < 0) {
 				this.setAnimation(this.animLeft);
 			} else {
 				this.setAnimation(this.animRight);
 			}
-		} else if(this.moveDirection.y < 0) {
+		} else if(this.weaponDirection.y < 0) {
 			this.setAnimation(this.animUp);
 		} else {
 			this.setAnimation(this.animDown);
@@ -1773,6 +1773,9 @@ Avatar.prototype = $extend(Entity.prototype,{
 		_this.z = 0.;
 		_this.w = 1.;
 	}
+	,getReloadProgress: function() {
+		return 1 - this.reloadTime / 0.2;
+	}
 	,onCollision: function(other,dt) {
 		if(((other) instanceof Wall)) {
 			var wall = js_Boot.__cast(other , Wall);
@@ -1821,14 +1824,14 @@ var Bullet = function(source,direction) {
 	_this1.x *= 500.0;
 	_this1.y *= 500.0;
 	_this1.z *= 500.0;
-	this.collider = new EntityCollider(this,24.0);
+	this.collider = new EntityCollider(this,28.0);
 	var flash = new MuzzleFlash(this);
 	var _g = flash;
 	_g.posChanged = true;
-	_g.x += direction.x * 24.0;
+	_g.x += direction.x * 28.0;
 	var _g1 = flash;
 	_g1.posChanged = true;
-	_g1.y += direction.y * 24.0;
+	_g1.y += direction.y * 28.0;
 	var atlas = hxd_Res.get_loader().loadCache("foreground.atlas",hxd_res_Atlas);
 	var shadow = atlas.getAnim("bullet_shadow");
 	Useful.assert(shadow != null,"atlas must contain the 'bullet_shadow'");
@@ -1924,6 +1927,7 @@ var BulletImpact = function(bullet) {
 	this.x = bullet.x;
 	this.posChanged = true;
 	this.y = bullet.y;
+	this.collider = new EntityCollider(this,64.0);
 	var atlas = hxd_Res.get_loader().loadCache("foreground.atlas",hxd_res_Atlas);
 	var explosion = atlas.getAnim("explosion");
 	Useful.assert(explosion != null,"atlas must contain the 'explosion'");
@@ -2168,9 +2172,9 @@ EntityCollider.generateCollisions = function(dt) {
 									} else {
 										var tmp2;
 										if(c11.x > b2.xMax && c11.y < b2.yMin) {
-											var dx11 = c11.x - b2.xMax;
-											var dy11 = c11.y - b2.yMin;
-											tmp2 = dx11 * dx11 + dy11 * dy11 > c11.ray * c11.ray;
+											var dx2 = c11.x - b2.xMax;
+											var dy2 = c11.y - b2.yMin;
+											tmp2 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
 										} else {
 											tmp2 = false;
 										}
@@ -2179,9 +2183,9 @@ EntityCollider.generateCollisions = function(dt) {
 										} else {
 											var tmp3;
 											if(c11.x < b2.xMin && c11.y > b2.yMax) {
-												var dx2 = c11.x - b2.xMin;
-												var dy2 = c11.y - b2.yMax;
-												tmp3 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
+												var dx3 = c11.x - b2.xMin;
+												var dy3 = c11.y - b2.yMax;
+												tmp3 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
 											} else {
 												tmp3 = false;
 											}
@@ -2190,9 +2194,9 @@ EntityCollider.generateCollisions = function(dt) {
 											} else {
 												var tmp4;
 												if(c11.x > b2.xMax && c11.y > b2.yMax) {
-													var dx3 = c11.x - b2.xMax;
-													var dy3 = c11.y - b2.yMax;
-													tmp4 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
+													var dx4 = c11.x - b2.xMax;
+													var dy4 = c11.y - b2.yMax;
+													tmp4 = dx4 * dx4 + dy4 * dy4 > c11.ray * c11.ray;
 												} else {
 													tmp4 = false;
 												}
@@ -2226,9 +2230,9 @@ EntityCollider.generateCollisions = function(dt) {
 								} else {
 									var tmp5;
 									if(c21.x < b1.xMin && c21.y < b1.yMin) {
-										var dx4 = c21.x - b1.xMin;
-										var dy4 = c21.y - b1.yMin;
-										tmp5 = dx4 * dx4 + dy4 * dy4 > c21.ray * c21.ray;
+										var dx5 = c21.x - b1.xMin;
+										var dy5 = c21.y - b1.yMin;
+										tmp5 = dx5 * dx5 + dy5 * dy5 > c21.ray * c21.ray;
 									} else {
 										tmp5 = false;
 									}
@@ -2237,9 +2241,9 @@ EntityCollider.generateCollisions = function(dt) {
 									} else {
 										var tmp6;
 										if(c21.x > b1.xMax && c21.y < b1.yMin) {
-											var dx12 = c21.x - b1.xMax;
-											var dy12 = c21.y - b1.yMin;
-											tmp6 = dx12 * dx12 + dy12 * dy12 > c21.ray * c21.ray;
+											var dx6 = c21.x - b1.xMax;
+											var dy6 = c21.y - b1.yMin;
+											tmp6 = dx6 * dx6 + dy6 * dy6 > c21.ray * c21.ray;
 										} else {
 											tmp6 = false;
 										}
@@ -2248,9 +2252,9 @@ EntityCollider.generateCollisions = function(dt) {
 										} else {
 											var tmp7;
 											if(c21.x < b1.xMin && c21.y > b1.yMax) {
-												var dx21 = c21.x - b1.xMin;
-												var dy21 = c21.y - b1.yMax;
-												tmp7 = dx21 * dx21 + dy21 * dy21 > c21.ray * c21.ray;
+												var dx7 = c21.x - b1.xMin;
+												var dy7 = c21.y - b1.yMax;
+												tmp7 = dx7 * dx7 + dy7 * dy7 > c21.ray * c21.ray;
 											} else {
 												tmp7 = false;
 											}
@@ -2259,9 +2263,9 @@ EntityCollider.generateCollisions = function(dt) {
 											} else {
 												var tmp8;
 												if(c21.x > b1.xMax && c21.y > b1.yMax) {
-													var dx31 = c21.x - b1.xMax;
-													var dy31 = c21.y - b1.yMax;
-													tmp8 = dx31 * dx31 + dy31 * dy31 > c21.ray * c21.ray;
+													var dx8 = c21.x - b1.xMax;
+													var dy8 = c21.y - b1.yMax;
+													tmp8 = dx8 * dx8 + dy8 * dy8 > c21.ray * c21.ray;
 												} else {
 													tmp8 = false;
 												}
@@ -2429,9 +2433,9 @@ EntityCollider.prototype = {
 						} else {
 							var result2;
 							if(c11.x > b2.xMax && c11.y < b2.yMin) {
-								var dx11 = c11.x - b2.xMax;
-								var dy11 = c11.y - b2.yMin;
-								result2 = dx11 * dx11 + dy11 * dy11 > c11.ray * c11.ray;
+								var dx2 = c11.x - b2.xMax;
+								var dy2 = c11.y - b2.yMin;
+								result2 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
 							} else {
 								result2 = false;
 							}
@@ -2440,9 +2444,9 @@ EntityCollider.prototype = {
 							} else {
 								var result3;
 								if(c11.x < b2.xMin && c11.y > b2.yMax) {
-									var dx2 = c11.x - b2.xMin;
-									var dy2 = c11.y - b2.yMax;
-									result3 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
+									var dx3 = c11.x - b2.xMin;
+									var dy3 = c11.y - b2.yMax;
+									result3 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
 								} else {
 									result3 = false;
 								}
@@ -2451,9 +2455,9 @@ EntityCollider.prototype = {
 								} else {
 									var result4;
 									if(c11.x > b2.xMax && c11.y > b2.yMax) {
-										var dx3 = c11.x - b2.xMax;
-										var dy3 = c11.y - b2.yMax;
-										result4 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
+										var dx4 = c11.x - b2.xMax;
+										var dy4 = c11.y - b2.yMax;
+										result4 = dx4 * dx4 + dy4 * dy4 > c11.ray * c11.ray;
 									} else {
 										result4 = false;
 									}
@@ -2487,9 +2491,9 @@ EntityCollider.prototype = {
 					} else {
 						var result5;
 						if(c21.x < b1.xMin && c21.y < b1.yMin) {
-							var dx4 = c21.x - b1.xMin;
-							var dy4 = c21.y - b1.yMin;
-							result5 = dx4 * dx4 + dy4 * dy4 > c21.ray * c21.ray;
+							var dx5 = c21.x - b1.xMin;
+							var dy5 = c21.y - b1.yMin;
+							result5 = dx5 * dx5 + dy5 * dy5 > c21.ray * c21.ray;
 						} else {
 							result5 = false;
 						}
@@ -2498,9 +2502,9 @@ EntityCollider.prototype = {
 						} else {
 							var result6;
 							if(c21.x > b1.xMax && c21.y < b1.yMin) {
-								var dx12 = c21.x - b1.xMax;
-								var dy12 = c21.y - b1.yMin;
-								result6 = dx12 * dx12 + dy12 * dy12 > c21.ray * c21.ray;
+								var dx6 = c21.x - b1.xMax;
+								var dy6 = c21.y - b1.yMin;
+								result6 = dx6 * dx6 + dy6 * dy6 > c21.ray * c21.ray;
 							} else {
 								result6 = false;
 							}
@@ -2509,9 +2513,9 @@ EntityCollider.prototype = {
 							} else {
 								var result7;
 								if(c21.x < b1.xMin && c21.y > b1.yMax) {
-									var dx21 = c21.x - b1.xMin;
-									var dy21 = c21.y - b1.yMax;
-									result7 = dx21 * dx21 + dy21 * dy21 > c21.ray * c21.ray;
+									var dx7 = c21.x - b1.xMin;
+									var dy7 = c21.y - b1.yMax;
+									result7 = dx7 * dx7 + dy7 * dy7 > c21.ray * c21.ray;
 								} else {
 									result7 = false;
 								}
@@ -2520,9 +2524,9 @@ EntityCollider.prototype = {
 								} else {
 									var result8;
 									if(c21.x > b1.xMax && c21.y > b1.yMax) {
-										var dx31 = c21.x - b1.xMax;
-										var dy31 = c21.y - b1.yMax;
-										result8 = dx31 * dx31 + dy31 * dy31 > c21.ray * c21.ray;
+										var dx8 = c21.x - b1.xMax;
+										var dy8 = c21.y - b1.yMax;
+										result8 = dx8 * dx8 + dy8 * dy8 > c21.ray * c21.ray;
 									} else {
 										result8 = false;
 									}
@@ -2615,9 +2619,9 @@ EntityCollider.prototype = {
 					} else {
 						var tmp1;
 						if(c11.x > b2.xMax && c11.y < b2.yMin) {
-							var dx11 = c11.x - b2.xMax;
-							var dy11 = c11.y - b2.yMin;
-							tmp1 = dx11 * dx11 + dy11 * dy11 > c11.ray * c11.ray;
+							var dx2 = c11.x - b2.xMax;
+							var dy2 = c11.y - b2.yMin;
+							tmp1 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
 						} else {
 							tmp1 = false;
 						}
@@ -2626,9 +2630,9 @@ EntityCollider.prototype = {
 						} else {
 							var tmp2;
 							if(c11.x < b2.xMin && c11.y > b2.yMax) {
-								var dx2 = c11.x - b2.xMin;
-								var dy2 = c11.y - b2.yMax;
-								tmp2 = dx2 * dx2 + dy2 * dy2 > c11.ray * c11.ray;
+								var dx3 = c11.x - b2.xMin;
+								var dy3 = c11.y - b2.yMax;
+								tmp2 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
 							} else {
 								tmp2 = false;
 							}
@@ -2637,9 +2641,9 @@ EntityCollider.prototype = {
 							} else {
 								var tmp3;
 								if(c11.x > b2.xMax && c11.y > b2.yMax) {
-									var dx3 = c11.x - b2.xMax;
-									var dy3 = c11.y - b2.yMax;
-									tmp3 = dx3 * dx3 + dy3 * dy3 > c11.ray * c11.ray;
+									var dx4 = c11.x - b2.xMax;
+									var dy4 = c11.y - b2.yMax;
+									tmp3 = dx4 * dx4 + dy4 * dy4 > c11.ray * c11.ray;
 								} else {
 									tmp3 = false;
 								}
@@ -2676,9 +2680,9 @@ EntityCollider.prototype = {
 				} else {
 					var tmp4;
 					if(c21.x < b1.xMin && c21.y < b1.yMin) {
-						var dx4 = c21.x - b1.xMin;
-						var dy4 = c21.y - b1.yMin;
-						tmp4 = dx4 * dx4 + dy4 * dy4 > c21.ray * c21.ray;
+						var dx5 = c21.x - b1.xMin;
+						var dy5 = c21.y - b1.yMin;
+						tmp4 = dx5 * dx5 + dy5 * dy5 > c21.ray * c21.ray;
 					} else {
 						tmp4 = false;
 					}
@@ -2687,9 +2691,9 @@ EntityCollider.prototype = {
 					} else {
 						var tmp5;
 						if(c21.x > b1.xMax && c21.y < b1.yMin) {
-							var dx12 = c21.x - b1.xMax;
-							var dy12 = c21.y - b1.yMin;
-							tmp5 = dx12 * dx12 + dy12 * dy12 > c21.ray * c21.ray;
+							var dx6 = c21.x - b1.xMax;
+							var dy6 = c21.y - b1.yMin;
+							tmp5 = dx6 * dx6 + dy6 * dy6 > c21.ray * c21.ray;
 						} else {
 							tmp5 = false;
 						}
@@ -2698,9 +2702,9 @@ EntityCollider.prototype = {
 						} else {
 							var tmp6;
 							if(c21.x < b1.xMin && c21.y > b1.yMax) {
-								var dx21 = c21.x - b1.xMin;
-								var dy21 = c21.y - b1.yMax;
-								tmp6 = dx21 * dx21 + dy21 * dy21 > c21.ray * c21.ray;
+								var dx7 = c21.x - b1.xMin;
+								var dy7 = c21.y - b1.yMax;
+								tmp6 = dx7 * dx7 + dy7 * dy7 > c21.ray * c21.ray;
 							} else {
 								tmp6 = false;
 							}
@@ -2709,9 +2713,9 @@ EntityCollider.prototype = {
 							} else {
 								var tmp7;
 								if(c21.x > b1.xMax && c21.y > b1.yMax) {
-									var dx31 = c21.x - b1.xMax;
-									var dy31 = c21.y - b1.yMax;
-									tmp7 = dx31 * dx31 + dy31 * dy31 > c21.ray * c21.ray;
+									var dx8 = c21.x - b1.xMax;
+									var dy8 = c21.y - b1.yMax;
+									tmp7 = dx8 * dx8 + dy8 * dy8 > c21.ray * c21.ray;
 								} else {
 									tmp7 = false;
 								}
@@ -3084,26 +3088,29 @@ GameScreen.prototype = $extend(State.prototype,{
 		State.score = 0;
 		this.zombiePeriod = 1.5;
 		this.zombieTimer = this.zombiePeriod;
-		var background = new h2d_Object(this);
+		this.zombieMaximum = 1;
+		this.zombieCount = 0;
+		var background = new h2d_Object();
 		var backgroundTile = hxd_Res.get_loader().loadCache("concrete.png",hxd_res_Image).toTile();
-		var x = 0.0;
-		while(x < 1366) {
-			var y = 0.0;
-			while(y < 664) {
-				var backgroundBitmap = new h2d_Bitmap(backgroundTile,background);
-				backgroundBitmap.posChanged = true;
-				backgroundBitmap.x = x;
-				backgroundBitmap.posChanged = true;
-				backgroundBitmap.y = y;
-				y += backgroundTile.height;
-			}
-			x += backgroundTile.width;
-		}
+		backgroundTile.setSize(1366,664);
+		var bitmap = new h2d_Bitmap(backgroundTile,this);
+		bitmap.set_tileWrap(true);
+		this.addChildAt(background,-1);
 		this.wallNorth = new Wall({ parent : this, x : 0, y : -664, width : 1366, height : 664});
 		this.wallSouth = new Wall({ parent : this, x : 0, y : 664, width : 1366, height : 664});
 		this.wallWest = new Wall({ parent : this, x : -1366, y : -664, width : 1366, height : 1992});
 		this.wallEast = new Wall({ parent : this, x : 1366, y : -664, width : 1366, height : 1992});
 		this.avatar = new Avatar({ parent : this, x : 683., y : 332.});
+		this.cursor = new h2d_Object();
+		var atlas = hxd_Res.get_loader().loadCache("foreground.atlas",hxd_res_Atlas);
+		var crosshairTile = atlas.get("crosshair");
+		Useful.assert(crosshairTile != null,"atlas must contain the 'crosshair'");
+		var bitmap1 = new h2d_Bitmap(crosshairTile,this.cursor);
+		bitmap1.posChanged = true;
+		bitmap1.x = -64;
+		bitmap1.posChanged = true;
+		bitmap1.y = 64;
+		this.addChildAt(this.cursor,1);
 	}
 	,onLeave: function(newState) {
 		State.score = this.avatar.score;
@@ -3111,15 +3118,37 @@ GameScreen.prototype = $extend(State.prototype,{
 		this.removeChildren();
 	}
 	,onUpdate: function(dt,mouseX,mouseY) {
+		var _gthis = this;
+		var _this = this.cursor;
+		_this.posChanged = true;
+		_this.x = mouseX;
+		var _this1 = this.cursor;
+		_this1.posChanged = true;
+		_this1.y = mouseY;
 		this.avatar.setTarget(mouseX,mouseY);
+		var cursorScale = 1 - this.avatar.getReloadProgress();
+		cursorScale *= cursorScale;
+		var _this2 = this.cursor;
+		var v = 1 + 0.2 * cursorScale;
+		_this2.posChanged = true;
+		_this2.scaleX = v;
+		_this2.posChanged = true;
+		_this2.scaleY = v;
 		Entity.updateAll(dt);
 		EntityCollider.generateCollisions(dt);
-		this.zombieTimer -= dt;
-		if(this.zombieTimer <= 0) {
-			this.zombieTimer = this.zombiePeriod;
-			this.zombiePeriod = Math.max(0.1,this.zombiePeriod - 0.02);
-			var angle = Math.random() * Math.PI * 2;
-			var zombie = new Zombie({ parent : this, x : 1366 * (0.5 + Math.cos(angle)), y : 664 * (0.5 + Math.sin(angle))});
+		if(this.zombieCount < this.zombieMaximum) {
+			this.zombieTimer -= dt;
+			if(this.zombieTimer <= 0) {
+				this.zombieCount++;
+				this.zombieTimer = this.zombiePeriod;
+				var angle = Math.random() * Math.PI * 2;
+				var zombie = new Zombie({ parent : this, x : 1366 * (0.5 + Math.cos(angle)), y : 664 * (0.5 + Math.sin(angle))});
+				zombie.onDeath = function() {
+					_gthis.zombiePeriod = Math.max(0.1,_gthis.zombiePeriod * 0.95);
+					_gthis.zombieMaximum = js_Boot.__cast(Math.min(30,_gthis.zombieMaximum + 1) , Int);
+					_gthis.zombieCount--;
+				};
+			}
 		}
 		this.ysort(0);
 	}
@@ -3371,7 +3400,7 @@ Main.prototype = $extend(hxd_App.prototype,{
 		var loader = new hxd_net_BinaryLoader("res.pak");
 		loader.load();
 		loader.onError = function(message) {
-			haxe_Log.trace("Failed to load PAK file",{ fileName : "src/Main.hx", lineNumber : 21, className : "Main", methodName : "init", customParams : [message]});
+			haxe_Log.trace("Failed to load PAK file",{ fileName : "src/Main.hx", lineNumber : 22, className : "Main", methodName : "init", customParams : [message]});
 		};
 		loader.onLoaded = function(bytes) {
 			var fs = new hxd_fmt_pak_FileSystem();
@@ -3384,10 +3413,13 @@ Main.prototype = $extend(hxd_App.prototype,{
 		var atlas = hxd_Res.get_loader().loadCache("foreground.atlas",hxd_res_Atlas);
 		this.s2d.set_scaleMode(h2d_ScaleMode.LetterBox(1366,664,false,h2d_ScaleModeAlign.Center,h2d_ScaleModeAlign.Center));
 		var mask = new h2d_Mask(1366,664,this.s2d);
+		var interactive = new h2d_Interactive(1366,664,this.s2d);
+		interactive.set_cursor(hxd_Cursor.Hide);
 		State.init({ parent : mask, states : [new TitleScreen(),new GameScreen(),new ScoreScreen()]});
 		State.setCurrent("title");
 		var $window = hxd_Window.getInstance();
 		$window.addEventTarget(State.triggerEvent);
+		hxd_Res.get_loader().loadCache("music.mp3",hxd_res_Sound).play(true,0.3);
 		this.loaded = true;
 	}
 	,update: function(dt) {
@@ -4122,6 +4154,8 @@ Xml.prototype = {
 	,__class__: Xml
 };
 var Zombie = function(args) {
+	this.killProgress = 0.0;
+	this.hasDamagedMe = new haxe_ds_ObjectMap();
 	this.stunDuration = 0.0;
 	this.hitpoints = 100;
 	this.moveDirection = new h3d_Vector(0,0,0);
@@ -4184,6 +4218,16 @@ var Zombie = function(args) {
 	_this10.posChanged = true;
 	_this10.y = 24;
 	this.animRight.set_visible(false);
+	var stunned = atlas.getAnim("zombie_stunned");
+	Useful.assert(stunned != null,"atlas must contain the 'zombie_stunned'");
+	this.animStunned = new h2d_Anim(stunned,null,this);
+	var _this11 = this.animStunned;
+	_this11.posChanged = true;
+	_this11.x = -32;
+	var _this12 = this.animStunned;
+	_this12.posChanged = true;
+	_this12.y = 24;
+	this.animStunned.set_visible(false);
 	this.target = js_Boot.__cast(Entity.getFirst(function(entity) {
 		return ((entity) instanceof Avatar);
 	}) , Avatar);
@@ -4195,6 +4239,7 @@ Zombie.__super__ = Entity;
 Zombie.prototype = $extend(Entity.prototype,{
 	update: function(dt) {
 		var _gthis = this;
+		this.killProgress = Math.max(0,this.killProgress - dt);
 		if(this.stunDuration > 0) {
 			this.stunDuration -= dt;
 			this.friction = 2000.0;
@@ -4298,15 +4343,9 @@ Zombie.prototype = $extend(Entity.prototype,{
 		this.currentAnim.speed = 5;
 	}
 	,onCollision: function(other,dt) {
-		if(((other) instanceof Bullet)) {
-			(js_Boot.__cast(other , Bullet)).explode();
-			this.hitpoints -= 25;
-			if(this.hitpoints <= 0) {
-				this.target.addScore(1);
-				new ZombieGibs(this);
-				this.purge = true;
-			} else {
-				this.stunDuration = 0.4;
+		if(((other) instanceof BulletImpact)) {
+			if(!this.hasDamagedMe.h[other.__id__]) {
+				this.hasDamagedMe.set(other,true);
 				var _this = this.moveDirection;
 				var x = this.x - other.x;
 				var y = this.y - other.y;
@@ -4321,133 +4360,98 @@ Zombie.prototype = $extend(Entity.prototype,{
 				_this.z = 0.;
 				_this.w = 1.;
 				var _this1 = this.moveDirection;
-				_this1.x *= 150;
-				_this1.y *= 150;
-				_this1.z *= 150;
-				var _this2 = this.moveDirection;
-				var v = other.speed;
-				var x1 = _this2.x + v.x;
-				var y1 = _this2.y + v.y;
-				var z = _this2.z + v.z;
-				var w = _this2.w + v.w;
-				if(w == null) {
-					w = 1.;
+				_this1.x *= 10;
+				_this1.y *= 10;
+				_this1.z *= 10;
+				var _this2 = this.speed;
+				var v = this.moveDirection;
+				this.speed = new h3d_Vector(_this2.x + v.x,_this2.y + v.y,_this2.z + v.z,_this2.w + v.w);
+				this.stunDuration = 0.2;
+				this.setAnimation(this.animStunned);
+				this.hitpoints -= 25;
+				if(this.hitpoints <= 0) {
+					this.target.addScore(1);
+					if(this.onDeath != null) {
+						this.onDeath();
+					}
+					new ZombieGibs(this);
+					this.purge = true;
 				}
-				if(z == null) {
-					z = 0.;
-				}
-				if(y1 == null) {
-					y1 = 0.;
-				}
-				if(x1 == null) {
-					x1 = 0.;
-				}
-				var inlVector_x = x1;
-				var inlVector_y = y1;
-				var inlVector_z = z;
-				var inlVector_w = w;
-				var _this3 = this.speed;
-				var v1 = this.moveDirection;
-				this.speed = new h3d_Vector(_this3.x + v1.x,_this3.y + v1.y,_this3.z + v1.z,_this3.w + v1.w);
 			}
-		} else if(((other) instanceof Zombie)) {
-			this.stunDuration = 0.2;
+		} else if(((other) instanceof Bullet)) {
+			(js_Boot.__cast(other , Bullet)).explode();
+			var _this3 = this.moveDirection;
+			var x1 = this.x - other.x;
+			var y1 = this.y - other.y;
+			if(y1 == null) {
+				y1 = 0.;
+			}
+			if(x1 == null) {
+				x1 = 0.;
+			}
+			_this3.x = x1;
+			_this3.y = y1;
+			_this3.z = 0.;
+			_this3.w = 1.;
 			var _this4 = this.moveDirection;
-			var x2 = this.x - other.x;
-			var y2 = this.y - other.y;
+			_this4.x *= 150;
+			_this4.y *= 150;
+			_this4.z *= 150;
+			var _this5 = this.moveDirection;
+			var v1 = other.speed;
+			var x2 = _this5.x + v1.x;
+			var y2 = _this5.y + v1.y;
+			var z = _this5.z + v1.z;
+			var w = _this5.w + v1.w;
+			if(w == null) {
+				w = 1.;
+			}
+			if(z == null) {
+				z = 0.;
+			}
 			if(y2 == null) {
 				y2 = 0.;
 			}
 			if(x2 == null) {
 				x2 = 0.;
 			}
-			_this4.x = x2;
-			_this4.y = y2;
-			_this4.z = 0.;
-			_this4.w = 1.;
-			var _this5 = this.moveDirection;
-			_this5.x *= 200;
-			_this5.y *= 200;
-			_this5.z *= 200;
+			var inlVector_x = x2;
+			var inlVector_y = y2;
+			var inlVector_z = z;
+			var inlVector_w = w;
 			var _this6 = this.speed;
 			var v2 = this.moveDirection;
 			this.speed = new h3d_Vector(_this6.x + v2.x,_this6.y + v2.y,_this6.z + v2.z,_this6.w + v2.w);
+		} else if(((other) instanceof Zombie)) {
+			this.stunDuration = 0.1;
+			var _this7 = this.moveDirection;
+			var x3 = this.x - other.x;
+			var y3 = this.y - other.y;
+			if(y3 == null) {
+				y3 = 0.;
+			}
+			if(x3 == null) {
+				x3 = 0.;
+			}
+			_this7.x = x3;
+			_this7.y = y3;
+			_this7.z = 0.;
+			_this7.w = 1.;
+			var _this8 = this.moveDirection;
+			_this8.x *= 200;
+			_this8.y *= 200;
+			_this8.z *= 200;
+			var _this9 = this.speed;
+			var v3 = this.moveDirection;
+			this.speed = new h3d_Vector(_this9.x + v3.x,_this9.y + v3.y,_this9.z + v3.z,_this9.w + v3.w);
 		} else if(((other) instanceof Avatar)) {
 			if(this.stunDuration <= 0) {
-				var _this7 = this.speed;
-				var _this8 = other.speed;
-				if(_this7.x * _this7.x + _this7.y * _this7.y + _this7.z * _this7.z > _this8.x * _this8.x + _this8.y * _this8.y + _this8.z * _this8.z) {
+				this.killProgress += 2 * dt;
+				if(this.killProgress > 0.1) {
 					State.setCurrent("score");
 					hxd_Res.get_loader().loadCache("gameover.wav",hxd_res_Sound).play(false,0.1);
-				} else {
-					var _this9 = other.speed;
-					_this9.x *= 0.4;
-					_this9.y *= 0.4;
-					_this9.z *= 0.4;
-					var _this10 = this.moveDirection;
-					var x3 = other.x - this.x;
-					var y3 = other.y - this.y;
-					if(y3 == null) {
-						y3 = 0.;
-					}
-					if(x3 == null) {
-						x3 = 0.;
-					}
-					_this10.x = x3;
-					_this10.y = y3;
-					_this10.z = 0.;
-					_this10.w = 1.;
-					var _this11 = this.moveDirection;
-					_this11.x *= 10;
-					_this11.y *= 10;
-					_this11.z *= 10;
-					var _this12 = other.speed;
-					var v3 = this.moveDirection;
-					other.speed = new h3d_Vector(_this12.x + v3.x,_this12.y + v3.y,_this12.z + v3.z,_this12.w + v3.w);
 				}
 			}
-			var _this13 = this.moveDirection;
-			var x4 = this.x - other.x;
-			var y4 = this.y - other.y;
-			if(y4 == null) {
-				y4 = 0.;
-			}
-			if(x4 == null) {
-				x4 = 0.;
-			}
-			_this13.x = x4;
-			_this13.y = y4;
-			_this13.z = 0.;
-			_this13.w = 1.;
-			var _this14 = this.moveDirection;
-			_this14.x *= 200;
-			_this14.y *= 200;
-			_this14.z *= 200;
-			var _this15 = this.speed;
-			var v4 = this.moveDirection;
-			var x5 = _this15.x + v4.x;
-			var y5 = _this15.y + v4.y;
-			var z1 = _this15.z + v4.z;
-			var w1 = _this15.w + v4.w;
-			if(w1 == null) {
-				w1 = 1.;
-			}
-			if(z1 == null) {
-				z1 = 0.;
-			}
-			if(y5 == null) {
-				y5 = 0.;
-			}
-			if(x5 == null) {
-				x5 = 0.;
-			}
-			var _this_x = x5;
-			var _this_y = y5;
-			var _this_z = z1;
-			var _this_w = w1;
-			var v5 = other.speed;
-			this.speed = new h3d_Vector(_this_x + v5.x,_this_y + v5.y,_this_z + v5.z,_this_w + v5.w);
-			this.stunDuration = 0.2;
 		}
 	}
 	,__class__: Zombie
@@ -67235,21 +67239,23 @@ Avatar.MEDIUM_FRICTION = 500.0;
 Avatar.LOW_FRICTION = 10;
 Avatar.ACCELERATION = 5000.0;
 Avatar.MAX_SPEED = 1000.0;
-Avatar.TIME_BETWEEN_BULLETS = 0.1;
+Avatar.TIME_BETWEEN_BULLETS = 0.2;
 Avatar.RECOIL = 100.0;
-Bullet.RADIUS = 24.0;
+Bullet.RADIUS = 28.0;
 Bullet.INITIAL_SPEED = 500.0;
 Bullet.MAX_SPEED = 2000.0;
 Bullet.TRAIL_PERIOD = 0.01;
+BulletImpact.RADIUS = 64.0;
 State.WIDTH = 1366;
 State.HEIGHT = 664;
 State.freeze = 0.0;
 State.shake = 0.0;
 State.score = 0;
 GameScreen.ZOMBIE_INITIAL_PERIOD = 1.5;
-GameScreen.ZOMBIE_PERIOD_DECREASE = 0.02;
+GameScreen.ZOMBIE_PERIOD_DECREASE = 0.05;
 GameScreen.ZOMBIE_MINIMUM_PERIOD = 0.1;
 GameScreen.ZOMBIE_DISTANCE = 50.0;
+GameScreen.ZOMBIE_MAXIMUM = 30;
 MuzzleFlash.DURATION = 0.07;
 MuzzleFlash.RADIUS = 32;
 Xml.Element = 0;
@@ -67260,11 +67266,12 @@ Xml.DocType = 4;
 Xml.ProcessingInstruction = 5;
 Xml.Document = 6;
 Zombie.RADIUS = 16;
-Zombie.COLLISION_STUN_DURATION = 0.2;
+Zombie.COLLISION_STUN_DURATION = 0.1;
 Zombie.ZOMBIE_COLLISION_KNOCKBACK = 200;
 Zombie.AVATAR_COLLISION_KNOCKBACK = 10;
 Zombie.MAX_REPULSION = 0.7;
 Zombie.REPULSION_RANGE = 96;
+Zombie.TIME_TO_KILL = 0.1;
 Zombie.HIGH_FRICTION = 2000.0;
 Zombie.LOW_FRICTION = 0.01;
 Zombie.ACCELERATION = 1000.0;
@@ -67272,7 +67279,7 @@ Zombie.MAX_SPEED = 300;
 Zombie.MAX_HITPOINTS = 100;
 Zombie.BULLET_DAMAGE = 25;
 Zombie.BULLET_KNOCKBACK = 150;
-Zombie.BULLET_STUN_DURATION = 0.4;
+Zombie.BULLET_STUN_DURATION = 0.2;
 ZombieGibs.DURATION = 0.7;
 ZombieGibs.RADIUS = 48;
 format_gif_Tools.LN2 = Math.log(2);
