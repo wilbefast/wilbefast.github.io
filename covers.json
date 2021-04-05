@@ -150,7 +150,7 @@
 		"name" : "Divergence",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2013,
-		"awesome" : 10
+		"awesome" : 9
 	},
 	"opium-of-the-masses" : {
 		"name" : "Opium of the masses",
@@ -171,7 +171,7 @@
 		"tech" : [ "Unity 3D", "FMOD" ],
 		"started" : 2013,
 		"finished" : 2014,
-		"awesome" : 5
+		"awesome" : 3
 	},
 	"eggz" : {
 		"name" : "Eggz",
@@ -192,7 +192,7 @@
 		"tech" : [ "Pixi.js", "Node.js", "Socket.io" ],
 		"started" : 2015,
 		"finished" : 2015,
-		"awesome" : 5
+		"awesome" : 2
 	},
 	"bugger" : {
 		"name" : "Bugger!",
@@ -257,5 +257,13 @@
 		"started" : 2016,
 		"finished" : 2016,
 		"awesome" : 8
+	},
+	"dinosocial-distancing" : {
+		"name" : "Dinosocial Distancing",
+		"image" : "dinosocial-distancing.png",
+		"tech" : [ "Haxe", "Heaps" ],
+		"started" : 2020,
+		"finished" : 2021,
+		"awesome" : 6
 	}
 }

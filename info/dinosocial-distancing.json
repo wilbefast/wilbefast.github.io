@@ -1,0 +1,13 @@
+{
+    "description" : [
+      "A top-down shooter made during the Covid pandemic."
+    ],
+    "team":{  
+      "Design, Programming, Music" : ["William Dyce"],
+      "Mario Kart Font" : ["David Fens"]
+    },
+    "links":{  
+      "Itch.io" : "https://wilbefast.itch.io/dinosocial-distancing",
+      "Github" : "https://github.com/wilbefast/HaxeShooter"
+    }
+  }
