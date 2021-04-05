@@ -1,0 +1,15 @@
+{
+	"description" : [
+		"A wizard-themed personality test and experiment with procedural text generation."
+	],
+	"team" : {
+		"Design & Programming" : [ "William Dyce" ],
+		"Major Arcana" : [ "Benebell Wen" ],
+		"Music" : [ "Alexandr Zhelanov" ],
+		"Dumbledore Font" : [ "Gemfonts" ]
+	},
+	"links" : {
+		"Itch.io" : "https://wilbefast.itch.io/meddlesome-mages",
+		"Github" : "https://github.com/wilbefast/MeddlesomeMages"
+	}
+}

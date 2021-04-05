@@ -261,9 +261,17 @@
 	"dinosocial-distancing" : {
 		"name" : "Dinosocial Distancing",
 		"image" : "dinosocial-distancing.png",
-		"tech" : [ "Haxe", "Heaps" ],
+		"tech" : [ "Heaps" ],
 		"started" : 2020,
 		"finished" : 2021,
-		"awesome" : 6
+		"awesome" : 4
+	},
+	"meddlesome-mages" : {
+		"name" : "Meddlesome Mages",
+		"image" : "meddlesome-mages.jpg",
+		"tech" : [ "Godot" ],
+		"started" : 2021,
+		"finished" : 2021,
+		"awesome" : 5
 	}
 }
