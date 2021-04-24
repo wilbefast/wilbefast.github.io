@@ -1,0 +1,16 @@
+{
+    "description" : [
+        "a voice-recognition game where you have to name cheeses in rapid succession, amongst other things"
+    ],
+    "team" : {
+        "Design" : [ "William Dyce", "Brenden Gibbons" ],
+        "Programming" : [ "William Dyce", "Hervé Denoyelle", "ElPapo" ],
+        "Art" : [ "Brenden Gibbons" ]
+    },
+    "embed":{
+        "youtube":"otR_k-9bw48"
+    },
+    "links" : {
+		"Github" : "https://github.com/wilbefast/riddler-sphix-html5"
+    }
+}

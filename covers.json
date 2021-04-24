@@ -273,5 +273,13 @@
 		"started" : 2021,
 		"finished" : 2021,
 		"awesome" : 5
+	},
+	"gratuitous-rap-battles" : {
+		"name" : "Gratuitous Rap Battles",
+		"image" : "gratuitous-rap-battles.jpg",
+		"tech" : [ "Flash", "HTML 5" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 6
 	}
 }
