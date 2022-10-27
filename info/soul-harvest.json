@@ -1,0 +1,18 @@
+{
+  "description" : [
+    "An arcade local-player real-time strategy game set in the underworld!"
+  ],
+  "team":{  
+    "Design":["William Dyce", "Matthieu Sablier"],
+    "Programming":["William Dyce"],
+    "Art":["Matthieu Sablier"],
+    "Music":["Erik Peabody"],
+    "Sound":["Taylor Shechet"]
+  },
+  "embed":{
+    "youtube":"O3A50CoGI1k"
+  },
+  "links":{  
+    "Itch.io" : "https://wilbefast.itch.io/soul-harvest"
+  }
+}
