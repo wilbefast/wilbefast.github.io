@@ -284,6 +284,7 @@
 	},
 	"soul-harvest" : {
 		"name" : "Soul Harvest",
+		"image" : "soul-harvest.gif",
 		"tech" : [ "Löve 2D" ],
 		"started" : 2014,
 		"finished" : 2022,
