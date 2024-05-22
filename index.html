@@ -1,189 +1,83 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<title>Wilbefast's Website</title>
-	<meta name="description" content="Wilbefast's game portfolio">
-	<meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio">
-	<meta name="author" content="William Dyce">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link rel="stylesheet" type="text/css" href="css/wilbefast.css">
-  
-	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-
-	<script type="text/javascript" src="js/covers.js"></script>
-
-  <script defer>
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-  </script>
-
-	<script type="text/javascript">
-	$(document).ready(function() {
-		covers.init({
-			cover_container : $('#cover_container'),
-			technology : $("#technology"),
-			sorting : $("#sorting"),
-			popup : $("#popup")
-		});
-	});
-	</script>
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="wilbefast.css" />
+    <title>Have Dice Will Dice</title>
+    <meta name="description" content="William Dyce's portfolio">
+    <meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio,game design, game development">
+    <meta name="author" content="William Dyce">
 </head>
 
-
 <body>
-
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <button type="button" 
-      class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="nav-collapse collapse">
-        <a target="_blank" href="http://twitter.com/wilbefast">
-        	<img src="social-media-icons/twitter.png" class="social-media-icon" alt="Twitter"/>
+        
+    <div class="nav">
+        <a href="./index.html">
+            <div class="home">
+            </div>
         </a>
-        <a target="_blank" href="http://fr.linkedin.com/in/williamdyce">
-        	<img src="social-media-icons/linkedin.png" class="social-media-icon" alt="LinkedIn"/>
-        </a>
-        <a target="_blank" href="http://github.com/wilbefast">
-        	<img src="social-media-icons/github.png" class="social-media-icon" alt="Github"/>
-        </a>
-        <a target="_blank" href="http://wilbefast.itch.io">
-        	<img src="social-media-icons/itch-io.png" class="social-media-icon" alt="Itch.io"/>
-        </a>
-        <a target="_blank" href="http://www.indiedb.com/members/wilbefast">
-        	<img src="social-media-icons/indiedb.png" class="social-media-icon" alt="Indie DB"/>
-        </a>
-        <a target="_blank" href="http://gamejolt.com/profile/wilbefast/672037/">
-        	<img src="social-media-icons/gamejolt.png" class="social-media-icon" alt="Game Jolt"/>
-        </a>
-        <a target="_blank" href="http://soundcloud.com/wilbefast">
-        	<img src="social-media-icons/soundcloud.png" class="social-media-icon" alt="Soundcloud"/>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Banner -->
-
-<div class="banner jumbotron">
-	<img src="images/banner.jpg">
-	</img>
-	<header>
-    <table>
-      <tr>
-        <td>
-      	  <h1>Where there's a will, be fast...</h1>      
-      	  <p>
-            #!/bin/bash<br>
-            <br>
-            # Oh hi there!<br>
-            # I'm William, Linux-user and navel-gazer supreme.<br>
-            # I make games.<br>
-            <br>
-            # Here are some games that I have made.<br>
-            <br>
-            rm -rf /
-          </p>
-
-        </td>
-        <!--
-        <td>
-          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/wilbefast" data-widget-id="501839840279687168">Tweets by @wilbefast</a>
-        </td>
-        -->
-      </tr>
-    </table>
-          
-	</header>
-</div>
-
-<!-- MixItUp controls -->
-
-<div class="controls">
-
-  <table>
-    <tr>
-    	<fieldset>
-        <td>
-      	  <label>Show:</label>
-        </td>
-        <td>
-      		<select id="technology">
-      	    <option value="all">All</option>
-      	  </select>
-        </td>
-      </fieldset>
-      <fieldset>
-        <td>
-        	<label>Sort by:</label>
-      	</td>
-        <td>
-        	<select id="sorting">
-      			<option value="awesome:desc">Awesome</option>
-      			<option value="name:asc">Name</option>
-      	    <option value="year:asc">Oldest</option>
-      	    <option value="year:desc">Newest</option>
-      	  </select>
-        </td>
-        </fieldset>
-      </td>
-	  <!--<input type="checkbox" name="order" value="reverse">Reverse</input>-->
-    </tr>
-  </table>
-</div>
-
-<!-- MixItUp container -->
-<div id="cover_container" class="container mixitup_container">
-</div>
-
-<!-- Game description popup -->
-<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        	<span aria-hidden="true">&times;</span>
-      	</button>
-        <h3 class="modal-title" id="popup_title"></h3>
-      </div>
-      <div class="modal-body text-center">
-        <image id="popup_image">
-        </image>
-        <div id="popup_embed">
+        <div class="options_list">
+            <a href="./index.html">
+                <div class="option">Shipped titles</div>
+            </a>
+            <a href="./about_me.html">
+                <div class="option">About me</div>
+            </a>
+            <a href="./other_projects.html">
+                <div class="option">Other projects</div>
+            </a>
         </div>
-        <div class="text-left">
-        	<h4 class="description">Description</h4>
-	        <p id="popup_description" class="description"></p>
-	        <h4 class="team">Team</h4>
-	        <table id="popup_team" class="team">
-	        	<th>Role</th><th>Members</th>
-        	</table>
-	        <h4 class="links">Links</h4><ul id="popup_links" class="links">
-	        </ul>
-	      </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">
-        	Close
-        </button>
-      </div>
     </div>
-  </div>
-</div>
 
 
+    <div class="title">
+        HAVE DICE<br/>WILL DYCE
+    </div>
+
+    <div class="subtitle">
+        I design game systems and AI opponents - click below for some of my previous work:
+    </div>
+
+    <div class="projects_list">
+        <a href="http://store.steampowered.com/app/1893810/Solium_Infernum/">
+            <div class="project" alt="Solium Infernum" style="background-image: url('covers/solium.jpg')">
+            </div>
+        </a>
+        <a href="http://store.steampowered.com/app/1124300/HUMANKIND/">
+            <div class="project" alt="Humankind" style="background-image: url('covers/humankind.jpg')">
+            </div>
+        </a>
+        <a href="http://store.steampowered.com/app/392110/ENDLESS_Space_2/">
+            <div class="project" alt="Endless Space 2" style="background-image: url('covers/endless-space-2.jpg')">
+            </div>
+        </a>
+        <a href="https://store.steampowered.com/app/289130/ENDLESS_Legend/">
+            <div class="project" alt="Endless Legend" style="background-image: url('covers/el.jpg')">
+            </div>
+        </a>
+        <a href="https://store.steampowered.com/app/425260/Soul_Harvest/">
+            <div class="project" alt="Soul Harvest" style="background-image: url('covers/soul-harvest.jpg')">
+            </div>
+        </a>
+        <div class="project placeholder">
+            Your game here?
+        </div>
+    </div>
+
+    <div class="subtitle">
+        Looking to collaborate on something? You can reach me using the following links:
+    </div>
+
+    <div class="link_list">
+        <a href="www.linkedin.com/in/williamdyce/">
+            <div class="link" alt="LinkedIn" style="background-image: url('images/linkedin.png')">
+            </div>
+        </a>
+        <a href="mailto:havedicewilldyce@fastmail.com">
+            <div class="link" alt="LinkedIn" style="background-image: url('images/email.png')">
+            </div>
+        </a>
+    </div>
 
 </body>
 

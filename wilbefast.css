@@ -1,0 +1,131 @@
+:root {
+    --option-width: 240px;
+    --option-count: 3;
+    --project-width: 460px;
+    --project-width-padded: 466px;
+    --project-height: 215px;
+    --project-count-per-row : 2;
+}
+
+@font-face {
+    font-family: western;
+    src: url("fonts/Silvano Western Demo.otf");
+    size-adjust: 110%;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: western, Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    padding-top: 20px;
+    min-height: 70px;
+}
+
+.home {
+    left: 50px;
+    top: 10px;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-image: url("images/dice-small.png");
+}
+
+.options_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(var(--option-width) * var(--option-count));
+    margin: auto;
+}
+
+.option {
+    display: grid;
+    align-items: center;
+    width : var(--option-width);
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.title {
+    display: grid;
+    align-items: center;
+    height: 240px;
+    font-size: 3em;
+    text-align: center;
+    background-image: url("images/dice.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.subtitle {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+
+.projects_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(var(--project-width-padded) * var(--project-count-per-row));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project {
+    font-size: 1.5em;
+    background-color: #f3f3f3;
+    display: grid;
+    align-items: center;
+    width: var(--project-width);
+    height: var(--project-height);
+    text-align: center;
+    margin: 3px;
+}
+
+.link_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 204px;
+    margin: auto;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.link {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    margin: 16px;
+}
+
+
+/* When smaller than 1000 pixels across */
+@media (max-width : 1000px) {
+    .home {
+        left: 30px;
+        top: 50px;
+    }
+
+    .subtitle {
+        width: 100%;
+    }
+
+    .options_list {
+        width: var(--option-width);
+        display: grid;
+    }
+
+    .projects_list {
+        width: var(--project-width);
+        display: grid;
+    }
+}
+
