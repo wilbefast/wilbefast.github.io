@@ -5,6 +5,10 @@
     --project-width-padded: 466px;
     --project-height: 215px;
     --project-count-per-row : 2;
+    --indie-project-width: 315px;
+    --indie-project-width-padded: 321px;
+    --indie-project-height: 250px;
+    --indie-project-count-per-row : 3;
 }
 
 @font-face {
@@ -79,6 +83,10 @@ body {
     margin-right: auto;
 }
 
+.indie.projects_list {
+    width: calc(var(--indie-project-width-padded) * var(--indie-project-count-per-row));
+}
+
 .project {
     font-size: 1.5em;
     background-color: #f3f3f3;
@@ -88,6 +96,14 @@ body {
     height: var(--project-height);
     text-align: center;
     margin: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.indie.project {
+    width: var(--indie-project-width);
+    height: var(--indie-project-height);
 }
 
 .link_list {
@@ -125,6 +141,11 @@ body {
 
     .projects_list {
         width: var(--project-width);
+        display: grid;
+    }
+
+    .indie.projects_list {
+        width: var(--indie-project-width);
         display: grid;
     }
 }
