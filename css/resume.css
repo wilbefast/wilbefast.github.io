@@ -43,9 +43,6 @@
 
 /* When smaller than 1000 pixels across */
 @media (max-width : 1000px) {
-    .bio {
-        flex-grow: initial;
-    }
 
     .bio > * {
         width: 95%;
