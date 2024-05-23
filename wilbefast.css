@@ -1,6 +1,7 @@
 :root {
     --option-width: 240px;
     --option-count: 3;
+    --option-height: 70px;
     --project-width: 460px;
     --project-width-padded: 466px;
     --project-height: 215px;
@@ -21,11 +22,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: western, Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .nav {
-    padding-top: 20px;
-    min-height: 70px;
+    padding-top: 10px;
+    min-height: 80px;
 }
 
 .home {
@@ -49,8 +51,7 @@ body {
     display: grid;
     align-items: center;
     width : var(--option-width);
-    height: 50px;
-    text-align: center;
+    height: var(--option-height);
     font-size: 1.5em;
 }
 
@@ -59,7 +60,6 @@ body {
     align-items: center;
     height: 240px;
     font-size: 3em;
-    text-align: center;
     background-image: url("images/dice.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -70,8 +70,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 2em;
-    text-align: center;
-    margin-top: 48px;
+    margin-top: 64px;
+    margin-bottom: 8px;
+}
+
+.overview {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
     margin-bottom: 16px;
 }
 
@@ -94,7 +102,6 @@ body {
     align-items: center;
     width: var(--project-width);
     height: var(--project-height);
-    text-align: center;
     margin: 3px;
     background-repeat: no-repeat;
     background-position: center;
@@ -122,16 +129,59 @@ body {
     margin: 16px;
 }
 
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.profile > img {
+    width: 400px;
+    object-fit: cover;
+    margin: 8px;
+}
+
+.bio {
+    text-align: left;
+    width: 300px;
+    margin: 16px;
+    flex-grow: 1;
+}
+
+.bio > .subtitle {
+    margin-top: 16px;
+}
+
+.bio > * {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question {
+    margin-top: 24px;
+    font-size: 1.5em;
+}
+
+
 
 /* When smaller than 1000 pixels across */
 @media (max-width : 1000px) {
     .home {
         left: 30px;
-        top: 50px;
+        top: 90px;
     }
 
-    .subtitle {
+    .subtitle, .overview, .bio > * {
         width: 100%;
+    }
+
+    .profile > img {
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .options_list {

@@ -1,0 +1,293 @@
+{
+	"supersoldat" : {
+		"name" : "Supersoldat",
+		"tech" : [ "Game maker" ],
+		"started" : 2006,
+		"finished" : 2008,
+		"awesome" : 6
+	},
+	"abomination" : {
+		"name" : "Abomination",
+		"tech" : [ "Game maker" ],
+		"started" : 2009,
+		"awesome" : 7
+	},
+	"roll-out-and-about" : {
+		"name" : "Roll Out and About",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 6
+	},
+	"australian-foreign-policy-simulator-2014" : {
+		"name" : "Australian Foreign Policy Simulator 2014",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 9
+	},
+	"snow-thy-enemy" : {
+		"name" : "Snow Thy Enemy",
+		"tech" : [ "Löve 2D", "Box 2D" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 8
+	},
+	"dj-quetzal" : {
+		"name" : "DJ Quetzalcoatl",
+		"tech" : [ "LWJGL", "Slick 2D" ],
+		"started" : 2012,
+		"finished" : 2012,
+		"awesome" : 4
+	},
+	"hidden-in-plain-text" : {
+		"name" : "Hidden in Plain Text",
+		"tech" : [ "libcaca" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 5
+	},
+	"surprise-cat-secks" : {
+		"name" : "Surprise Cat Secks",
+		"tech" : [ "HTML 5" ],
+		"started" : 2012,
+		"finished" : 2012,
+		"awesome" : 3
+	},
+	"hugly" : {
+		"name" : "Hugly",
+		"image" : "hugly.gif",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013,
+		"awesome" : 8
+	},
+	"twilight-of-humanity" : {
+		"name" : "Twilight of Humanity",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 9
+	},
+	"just-be-yourself" : {
+		"name" : "Just Be Yourself",
+		"tech" : [ "OpenFL" ],
+		"started" : 2013,
+		"awesome" : 8
+	},
+	"zombie-run" : {
+		"name" : "Zombie Run",
+		"tech" : [ "Game maker" ],
+		"started" : 2009,
+		"finished" : 2010,
+		"awesome" : 6
+	},
+	"murder-man" : {
+		"name" : "Murder Man",
+		"tech" : [ "Game maker" ],
+		"started" : 2009,
+		"finished" : 2010,
+		"awesome" : 5
+	},
+	"malloc" : {
+		"name" : "Malloc",
+		"tech" : [ "SDL" ],
+		"started" : 2010,
+		"finished" : 2010,
+		"awesome" : 0
+	},
+	"storm-worm" : {
+		"name" : "Storm Worm",
+		"tech" : [ "SDL" ],
+		"started" : 2010,
+		"finished" : 2010,
+		"awesome" : 0
+	},
+	"race-4-extinction" : {
+		"name" : "Race 4 Extinction",
+		"tech" : [ "Game maker" ],
+		"started" : 2011,
+		"awesome" : 4
+	},
+	"disquiet" : {
+		"name" : "Disquiet",
+		"tech" : [ "SFML", "FMOD" ],
+		"started" : 2012,
+		"finished" : 2012,
+		"awesome" : 5
+	},
+	"10-second-onslaught" : {
+		"name" : "10 Second Onslaught",
+		"tech" : [ "OpenFL" ],
+		"started" : 2013,
+		"finished" : 2013,
+		"awesome" : 2
+	},
+	"gone" : {
+		"name" : "Gone",
+		"tech" : [ "Android SDK" ],
+		"started" : 2010,
+		"awesome" : 3
+	},
+	"black-dog-html5" : {
+		"name" : "Black Dog (HTML 5)",
+		"tech" : [ "HTML 5" ],
+		"started" : 2012,
+		"awesome" : 3
+	},
+	"black-dog-ndk" : {
+		"name" : "Black Dog (Android)",
+		"tech" : [ "SDL", "Android NDK" ],
+		"started" : 2012,
+		"awesome" : 4
+	},
+	"dispatch-mushroom-hunt" : {
+		"name" : "Dispatch: Mushroom Hunt",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013,
+		"awesome" : 6
+	},
+	"divergence" : {
+		"name" : "Divergence",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013,
+		"awesome" : 9
+	},
+	"opium-of-the-masses" : {
+		"name" : "Opium of the masses",
+		"image" : "opium-of-the-masses.gif",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013,
+		"awesome" : 10
+	},
+	"kraken-pool-party" : {
+		"name" : "Kraken Pool Party",
+		"tech" : [ "Unity 3D" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 6
+	},
+	"sympathy" : {
+		"name" : "Sympathy",
+		"tech" : [ "Unity 3D", "FMOD" ],
+		"started" : 2013,
+		"finished" : 2014,
+		"awesome" : 3
+	},
+	"eggz" : {
+		"name" : "Eggz",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2013,
+		"awesome" : 6
+	},
+	"chlorine-dawn" : {
+		"name" : "Chlorine Dawn",
+		"image" : "chlorine-dawn.gif",
+		"tech" : [ "OpenFL" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 5
+	},
+	"rootkit10" : {
+		"name" : "Rookit10",
+		"tech" : [ "Pixi.js", "Node.js", "Socket.io" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 2
+	},
+	"bugger" : {
+		"name" : "Bugger!",
+		"tech" : [ "SFML" ],
+		"started" : 2010,
+		"awesome" : 3
+	},
+	"somebody-order-a-pizza" : {
+		"name" : "Somebody order a pizza?",
+		"tech" : [ "Löve 2D", "Box 2D" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 3
+	},
+	"xx13-pace-breaker" : {
+		"name" : "XX13: Pace Breaker",
+		"tech" : [ "HTML 5", "Node.js", "Socket.io" ],
+		"started" : 2013,
+		"awesome" : 3
+	},
+	"puppet-joust" : {
+		"name" : "Puppet Joust",
+		"image" : "puppet-joust.jpg",
+		"tech" : [ "Physical" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 6
+	},
+	"stitch-wars" : {
+		"name" : "Stitch Wars",
+		"tech" : [ "HTML 5" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 4
+	},
+	"butt-jockey" : {
+		"name" : "Butt Jockey",
+		"tech" : [ "Physical", "Unity 3D" ],
+		"started" : 2015,
+		"finished" : 2015,
+		"awesome" : 6
+	},
+	"burn-the-witch" : {
+		"name" : "Burn the Witch",
+		"image" : "burn-the-witch.gif",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2016,
+		"finished" : 2016,
+		"awesome" : 7
+	},
+	"troll-attack" : {
+		"name" : "Troll Attack",
+		"tech" : [ "Pico8" ],
+		"started" : 2016,
+		"finished" : 2016,
+		"awesome" : 10
+	},
+	"kanelbullicka" : {
+		"name" : "Kanelbullicka",
+		"image" : "kanelbullicka.gif",
+		"tech" : [ "Löve 2D", "Box 2D" ],
+		"started" : 2016,
+		"finished" : 2016,
+		"awesome" : 8
+	},
+	"dinosocial-distancing" : {
+		"name" : "Dinosocial Distancing",
+		"image" : "dinosocial-distancing.png",
+		"tech" : [ "Heaps" ],
+		"started" : 2020,
+		"finished" : 2021,
+		"awesome" : 4
+	},
+	"meddlesome-mages" : {
+		"name" : "Meddlesome Mages",
+		"image" : "meddlesome-mages.jpg",
+		"tech" : [ "Godot" ],
+		"started" : 2021,
+		"finished" : 2021,
+		"awesome" : 5
+	},
+	"gratuitous-rap-battles" : {
+		"name" : "Gratuitous Rap Battles",
+		"image" : "gratuitous-rap-battles.jpg",
+		"tech" : [ "Flash", "HTML 5" ],
+		"started" : 2014,
+		"finished" : 2014,
+		"awesome" : 6
+	},
+	"soul-harvest" : {
+		"name" : "Soul Harvest",
+		"image" : "soul-harvest.gif",
+		"tech" : [ "Löve 2D" ],
+		"started" : 2014,
+		"finished" : 2022,
+		"awesome" : 13
+	}
+}
