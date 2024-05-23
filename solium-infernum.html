@@ -2,7 +2,9 @@
 
 <head>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="wilbefast.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
     <title>Have Dice Will Dice</title>
     <meta name="description" content="William Dyce's portfolio">
     <meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio,game design, game development">
@@ -17,9 +19,17 @@
             </div>
         </a>
         <div class="options_list">
-            <a href="./index.html">
-                <div class="option">Shipped titles</div>
-            </a>
+            <div class="dropdown dropbtn">
+                <a href="./index.html">
+                    <div class="option">Shipped titles</div>
+                </a>
+                <div class="dropdown-content">
+                    <a href="solium-infernum.html">Solium Infernum</a>
+                    <a href="humankind.html">Humankind</a>
+                    <a href="endless-space2.html">Endless Space 2</a>
+                    <a href="endless-legend.html">Endless Legend</a>
+                </div>
+            </div>
             <a href="./about_me.html">
                 <div class="option">About me</div>
             </a>
@@ -33,18 +43,26 @@
         Solium Infernum
     </div>
 
-    <div class="profile">
-        <img class="big" alt="Solium Infernum screenshot" src="images/solium.jpg" style="object-position: right;"></img>
-        <div class="bio">
-            
+    <div class="twins">
+        <div class="left">
+            <img alt="Solium Infernum legion combat screenshot" src="portfolio/solium1.webp"></img>
+        </div>
+        <div class="right">
             <div class="subsubtitle">Content design</div>
             <div class="overview">
-                I arrived somewhat late in development, but was able to help finalise the design of much of the game's content.
+                Brought on for the final 16 months of development, I was able to help finalise the design of much of the game's content.
                 I then took charge of tuning essentially every numeric value in the game, including the attributes and costs of military units, 
                 power upgrades, relics, neutral places of power, artefacts, manuscripts, praetors, rituals, events and schemes. 
                 I created and maintained a set of spreadsheets to keep track of all of this data for QA, and to run automated sanity checks on it.
             </div>
+        </div>
+    </div>
 
+    <div class="twins">
+        <div class="left">
+            <img alt="Solium Infernum duelling screenshot" src="portfolio/solium2.webp"></img>
+        </div>
+        <div class="right">
             <div class="subsubtitle">System design</div>
             <div class="overview">
                 I successfully pitched adding unique, active abilities as a way of strongly differentiating the 9 playable Archfiend characters.
@@ -53,7 +71,14 @@
                 I also pitched, defended and wrote specifications for the streamlined praetor duelling system that ended up being implemented:
                 this was tricky, as the new system needed to fit into our remaining budget while using the art that had been created for the original system.   
             </div>
+        </div>
+    </div>
 
+    <div class="twins">
+        <div class="left">
+            <img alt="Solium Infernum NPC message screenshot" src="portfolio/solium3.webp"></img>
+        </div>
+        <div class="right">
             <div class="subsubtitle">NPC Behaviour</div>
             <div class="overview">
                 I designed and helped implement the game's computer opponents, including their heuristic-based goal-selection,
@@ -61,7 +86,15 @@
                 I hacked in the system for sending in-character messages to human players: 
                 this required a light touch, as the player can easily feel that they being spammed if you're not careful.
             </div>
+        </div>
+    </div>
+</div>
 
+    <div class="twins">
+        <div class="left">
+            <img alt="Solium Infernum event effect screenshot" src="portfolio/solium4.webp"></img>
+        </div>
+        <div class="right">
             <div class="subsubtitle">Implementation</div>
             <div class="overview">
                 As well as tuning content and NPC behaviour, I got my hands dirty directly implementing much of the dynamic content for the game's notification system.

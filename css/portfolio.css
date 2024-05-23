@@ -1,0 +1,45 @@
+.twins {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 16px;
+}
+
+.left {
+}
+
+.left > img {
+    width: 800px;
+}
+
+.right {
+    text-align: left;
+    width: 300px;
+    flex-grow: 1;
+}
+
+.right > * {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* When smaller than 1000 pixels across */
+@media (max-width : 1000px) {
+    .twins > * {
+        width: 95%;
+    }
+
+    .left > img {
+        width: 100%;
+    }
+    
+    .left, .right {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-grow: initial;
+    }
+}

@@ -1,0 +1,63 @@
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.profile > img {
+    width: 400px;
+    object-fit: cover;
+    margin: 8px;
+}
+
+.bio {
+    text-align: left;
+    width: 300px;
+    margin: 16px;
+    flex-grow: 1;
+}
+
+.bio > .subtitle {
+    margin-top: 16px;
+}
+
+.bio > * {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.release {
+    margin-left: 64px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+/* When smaller than 1000 pixels across */
+@media (max-width : 1000px) {
+    .bio {
+        flex-grow: initial;
+    }
+
+    .bio > * {
+        width: 95%;
+    }
+
+    .profile > img {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .release {
+        margin-left: 64px;
+    }
+}

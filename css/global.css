@@ -1,5 +1,6 @@
 :root {
     --option-width: 240px;
+    --option-width-padded: 248px;
     --option-count: 3;
     --option-height: 70px;
     --project-width: 460px;
@@ -16,9 +17,13 @@
 
 @font-face {
     font-family: western;
-    src: url("fonts/Silvano Western Demo.otf");
+    src: url("../fonts/Silvano Western Demo.otf");
     size-adjust: 110%;
   }
+
+a {
+    text-decoration: none;
+}
 
 body {
     margin: 0;
@@ -39,13 +44,13 @@ body {
     width: 70px;
     height: calc(var(--nav-height) - var(--nav-padding));
     background-size: cover;
-    background-image: url("images/dice-small.png");
+    background-image: url("../images/dice-small.png");
 }
 
 .options_list {
     display: flex;
     flex-wrap: wrap;
-    width: calc(var(--option-width) * var(--option-count));
+    width: calc(var(--option-width-padded) * var(--option-count));
     margin: auto;
 }
 
@@ -55,6 +60,8 @@ body {
     width : var(--option-width);
     height: var(--option-height);
     font-size: 1.5em;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .title {
@@ -62,7 +69,7 @@ body {
     align-items: center;
     height: 240px;
     font-size: 3em;
-    background-image: url("images/dice.png");
+    background-image: url("../images/dice.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -74,6 +81,11 @@ body {
     font-size: 2em;
     margin-top: 64px;
     margin-bottom: 8px;
+}
+
+.subsubtitle {
+    margin-top: 24px;
+    font-size: 1.5em;
 }
 
 .overview {
@@ -131,58 +143,6 @@ body {
     margin: 16px;
 }
 
-.profile {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-}
-
-.profile > img {
-    width: 400px;
-    object-fit: cover;
-    margin: 8px;
-}
-
-.profile > .big {
-    width: 500px
-}
-
-.bio {
-    text-align: left;
-    width: 300px;
-    margin: 16px;
-    flex-grow: 1;
-}
-
-.bio > .subtitle {
-    margin-top: 16px;
-}
-
-.bio > * {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.subsubtitle {
-    margin-top: 24px;
-    font-size: 1.5em;
-}
-
-.cv {
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-}
-
-.release {
-    margin-left: 64px;
-    margin-top: 8px;
-    margin-bottom: 12px;
-}
-
 /* When smaller than 1000 pixels across */
 @media (max-width : 1000px) {
     .home {
@@ -190,18 +150,8 @@ body {
         top: 90px;
     }
 
-    .subtitle, .overview, .bio > * {
+    .subtitle, .overview > * {
         width: 95%;
-    }
-
-    .profile > img {
-        width: 380px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .profile > .big {
-        width: 400px
     }
 
     .options_list {
@@ -217,14 +167,6 @@ body {
     .indie.projects_list {
         width: var(--indie-project-width);
         display: grid;
-    }
-
-    .release {
-        margin-left: 64px;
-    }
-
-    .popup {
-        top: 220px;
     }
 }
 
