@@ -160,12 +160,17 @@ body {
     margin-right: auto;
 }
 
-.question {
+.subsubtitle {
     margin-top: 24px;
     font-size: 1.5em;
 }
 
-
+.release {
+    color: gray;
+    margin-left: 64px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
 
 /* When smaller than 1000 pixels across */
 @media (max-width : 1000px) {
@@ -175,7 +180,7 @@ body {
     }
 
     .subtitle, .overview, .bio > * {
-        width: 100%;
+        width: 95%;
     }
 
     .profile > img {
@@ -197,6 +202,11 @@ body {
     .indie.projects_list {
         width: var(--indie-project-width);
         display: grid;
+    }
+
+    .release {
+        color: gray;
+        margin-left: 64px;
     }
 }
 
