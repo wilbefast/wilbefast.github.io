@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/portfolio.css" />
     <link rel="stylesheet" href="css/dropdown.css" />
-    <title>Have Dice Will Dice</title>
+    <title>Solium Infernum &mdash; William Dyce - Game Designer</title>
     <meta name="description" content="William Dyce's portfolio">
-    <meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio,game design, game development">
+    <meta name="keywords" content="Games,Indie,wilbefast,GameDev,portfolio,game design, game development,Solium Infernum">
     <meta name="author" content="William Dyce">
     <meta property="og:image" content="images/portrait">
 </head>
@@ -54,9 +54,17 @@
             <div class="overview">
                 Brought on for the last 18 months of development, I was able to help finalise the design of much of the game's release content,
                 and to prepare additional content for post-release support.
-                I took charge of tuning essentially every numeric value in the game, including the attributes and costs of military units, 
-                power upgrades, relics, neutral places of power, artefacts, manuscripts, praetors, rituals, events and schemes. 
-                I created and maintained a set of spreadsheets to keep track of all of this data for QA, and to run automated sanity checks on it.
+                I took charge of tuning essentially every numeric value in the game, including the attributes and costs of legions, titans, 
+                power upgrades, relics, places of power, artefacts, manuscripts, praetors, rituals, events and schemes. 
+            </div>
+            <div class="overview">
+                I created and maintained a set of <b>Google Sheets</b> to keep track the game's data for QA, 
+                to identify gaps that future content might slot into, 
+                and to run automated sanity checks. I used <b>Excel</b> for the heavy lifting: 
+                to tune the economy, 
+                to simulate battles between pairs of legions and praetors, 
+                to trawl the text of Milton's Paradise Lost for good game-session identifiers, 
+                and for myriad other tasks.
             </div>
         </div>
     </div>
@@ -68,11 +76,16 @@
         <div class="right">
             <div class="subsubtitle">System design</div>
             <div class="overview">
-                I successfully pitched adding unique, active abilities as a way of strongly differentiating the 9 playable Archfiend characters.
-                I then proposed designs for each of these abilities, iterating with the creative director and other designers 
+                I successfully pitched adding unique, active abilities as a way of strongly differentiating the playable Archfiend characters.
+                I then proposed designs for each of these abilities, iterating with the creative director and lead designer 
                 until we settled on something that we all felt was appropriate. 
-                I also pitched, defended and wrote specifications for the streamlined praetor duelling system that ended up being implemented:
-                this was tricky, as the new system needed to fit into our remaining budget and use the art that had been created for the original system.   
+                I also pitched, prototyped, defended and wrote specifications for the streamlined praetor duelling system that ended up being implemented:
+                this was tricky, as the new system needed to fit into our remaining budget while using the art that had been created for the original system. 
+            </div>
+            <div class="overview">
+                I used <b>PowerPoint</b> for proposals, <b>Playcards.io</b> for prototypes, <b>Miro</b> for brainstorms and <b>Confluence</b> for technical specifications.
+                I ultimately took ownership of most of the game's documentation, correcting and adapting it as issues emerged, 
+                and serving as a living source of truth for the team. 
             </div>
         </div>
     </div>
@@ -85,9 +98,14 @@
             <div class="subsubtitle">NPC Behaviour</div>
             <div class="overview">
                 I designed and helped implement the game's computer opponents, including their heuristic-based goal-selection,
-                personality system (Archfiend-specific behaviour), and grievance-tracking in order to choose favoured opponent. 
-                I hacked in the system for sending in-character messages to human players: 
-                this required a light touch, as the player can easily feel that they being spammed if you're not careful.
+                personality system (Archfiend-specific behaviour), and grievance-tracking (used to choose favoured opponent). 
+                I also built the system for sending in-character messages to human players: 
+                this required a light touch, as the player can easily feel that they are being spammed if you're not careful.
+            </div>
+            <div class="overview">
+                I used a mixture of <b>Confluence</b> and <b>Miro</b> for documenting the heuristics, goals, properties and actions required for
+                the game's <b>Goal-Oriented Action Planning</b>. Miro was also used for project management too:
+                I effectively served as the producer for the game's bots, planning and following up on the tasks necessary to make them engaging to play against.   
             </div>
         </div>
     </div>
@@ -101,9 +119,13 @@
             <div class="subsubtitle">Implementation</div>
             <div class="overview">
                 As well as tuning content and NPC behaviour, I got my hands dirty directly implementing much of the dynamic content for the game's notification system.
-                This included messages detailing the specific effects of any events and rituals that are resolved, 
+                This included messages detailing the specific effects of any events and rituals that have been resolved, 
                 and messages explaining why specific players actions have failed.
                 Given the asynchronous nature of the game, clear messaging in these areas was vital: I'm very proud of the result. 
+            </div>
+            <div class="overview">
+                The game was written in <b>C#</b> using the <b>Unity 3D</b> game engine, with <b>Git</b> used for source management and <b>Gitlab</b> for continuous integration. 
+                Despite arriving at a relatively late stage, I had contributed the third highest number of commits to the project by the time we wrapped up.
             </div>
         </div>
     </div>

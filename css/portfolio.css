@@ -26,8 +26,8 @@
     margin-right: auto;
 }
 
-/* When smaller than 1000 pixels across */
-@media (max-width : 1000px) {
+/* When smaller than 1300 pixels across */
+@media (max-width : 1600px) {
     .twins > * {
         width: 95%;
     }
