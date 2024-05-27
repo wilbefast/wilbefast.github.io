@@ -25,7 +25,12 @@ a {
     text-decoration: none;
 }
 
+* {
+    max-height: 999999px; /* stop it Chrome, I know what I'm doing! */
+}
+
 body {
+    font-size: 1em;
     margin: 0;
     padding: 0;
     font-family: western, Arial, Helvetica, sans-serif;
@@ -150,7 +155,7 @@ body {
         top: 90px;
     }
 
-    .subtitle, .overview > * {
+    .subtitle, .overview, .overview > * {
         width: 95%;
     }
 
@@ -165,8 +170,18 @@ body {
     }
 
     .indie.projects_list {
-        width: var(--indie-project-width);
-        display: grid;
+        width: calc(var(--indie-project-width-padded) * 2);
+        display: flex;
     }
 }
 
+@media (pointer: coarse), (pointer: none) {
+    .option {
+        font-size: 2em;
+        margin-bottom: 64px;
+    }
+
+    .home {
+        top: 142px;
+    }
+}
