@@ -36,6 +36,8 @@
 }
 
 .release, .tool, .book {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
     margin-left: 64px;
     margin-top: 8px;
     margin-bottom: 12px;

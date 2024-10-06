@@ -147,6 +147,10 @@ body {
     margin: 16px;
 }
 
+.precision {
+    font-weight: bold;
+}
+
 /* When smaller than 1000 pixels across */
 @media (max-width : 1000px) {
     .home {
