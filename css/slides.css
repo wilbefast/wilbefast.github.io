@@ -1,0 +1,9 @@
+.slides {
+    height:100vh;
+    color:#fff;
+}
+
+.slides > object {
+    width: 100%;
+    height: 100%;
+}
